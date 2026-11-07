@@ -1,0 +1,35 @@
+{
+  "objective": "support",
+  "seed": 2026,
+  "label": "y_support",
+  "base_model": "/home/<user>/.cache/huggingface/hub/models--BAAI--bge-reranker-v2-m3/snapshots/953dc6f6f85a1b2dbfca4c34a2796e7dde08d41e",
+  "max_length": 512,
+  "micro": 4,
+  "accum": 4,
+  "effective_batch": 16,
+  "lr": 1e-05,
+  "weight_decay": 0.01,
+  "warmup_ratio": 0.1,
+  "epochs": 3,
+  "train_pairs": 26432,
+  "train_truncated_pairs": 0,
+  "total_steps": 4956,
+  "loss": "BCEWithLogits(single logit)",
+  "precision": "fp32",
+  "selection": "stage4 checkpoint_key on dev, patience 2",
+  "smoke": false,
+  "env": {
+    "python": "3.10.12",
+    "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+    "host": "<gpu-host>",
+    "HF_ENDPOINT": "https://hf-mirror.com",
+    "torch": "2.7.1+cu118",
+    "cuda_available": true,
+    "visible_gpus": [
+      "Tesla P40 (22.4 GB, cc 6.1)"
+    ],
+    "transformers": "5.19.0",
+    "CUDA_VISIBLE_DEVICES": "1"
+  },
+  "started": "2026-11-02T06:03:49+00:00"
+}

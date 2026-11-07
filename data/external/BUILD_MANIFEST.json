@@ -1,0 +1,55 @@
+{
+  "dataset": "TCM-BEST4SDT（辨证论治任务 TCM_SDT.json）",
+  "source_url": "https://github.com/DYJG-research/TCM-BEST4SDT",
+  "source_commit": "60407f21403b3097a84bc9bb206b4715c296ecc6",
+  "source_sha256": "d94711ac60db83e3a33c2c46b1d6efbf072565a22e8fd464f5f61b444860de59",
+  "citation": "Li K, Guo J, Shang Z, et al. A benchmark dataset for evaluating Syndrome Differentiation and Treatment in large language models. arXiv:2512.02816, 2025.",
+  "archive": "Figshare DOI 10.6084/m9.figshare.30615956",
+  "license": "数据集以 CC BY 4.0 发布；代码仓库为 Apache-2.0。使用时须注明出处。",
+  "script_sha256": "acc16c071686b679a11472e81dc3d92df94db836bb7afcf0801c001e40797c27",
+  "rules": {
+    "version": "ext-points-1",
+    "题型": "sha256(\"EXT-QTYPE:\"+病例编号) 为偶数 → 诊断题，否则治则题",
+    "疾病诊断": "“中医疾病诊断”字段；去掉括号内的说明（多为证型或西医病名）；按 ，、；/ 拆分；各部分都写成 4 字以上加“证”的（字段实为证型）不出疾病要点",
+    "证候": "“证型”字段；去掉括号内容；按 ，、；/ 和“兼”拆成证候要素；去掉末尾的“证/型”（剩余不少于 4 字时）；与疾病要点相同的不重复；保留前 3 个",
+    "病机": "“病机”字段；去掉括号内容后按标点拆成分句；取前 2 个合格分句：4–12 字、含病机用字（亏亢伤失实寒扰损毒气湿滞火热燥犯痰瘀盛结耗蕴虚血衰逆郁闭阳阴阻风）、不以“导致、因此、日久、尚未……”等词开头、不含“则、故、导致、所致、引起、症状、表现为”及“大便、小便、吞咽、食欲、饮食、睡眠”等症状描述、不与证候要点重复",
+    "治疗原则": "“治则治法”字段；去掉括号内容；按 scripts/draft_points.py 的 split_terms 拆分；去掉开头的“佐以、兼……”；保留 2–14 字的短语",
+    "更正": {
+      "白庁": "白疕"
+    },
+    "分层": "编号 1–150 为名家医案改写与教材式病例（classical），其余为现代临床病例（modern）",
+    "题型指令": {
+      "diagnosis": "请解释该病例的诊断、证候与病因病机。",
+      "principle": "请说明适用于该病例的治疗原则，不要求方药剂量。"
+    }
+  },
+  "n_cases": 300,
+  "by_stratum_and_type": {
+    "classical/diagnosis": 70,
+    "classical/principle": 80,
+    "modern/diagnosis": 78,
+    "modern/principle": 72
+  },
+  "point_types": {
+    "治疗原则": 344,
+    "疾病诊断": 151,
+    "证候": 190,
+    "病机": 273
+  },
+  "points_per_question": {
+    "1": 3,
+    "2": 115,
+    "3": 45,
+    "4": 100,
+    "5": 32,
+    "6": 5
+  },
+  "notes": {
+    "disease_field_is_syndrome": 2
+  },
+  "questions_with_leak_flags": 54,
+  "outputs": {
+    "external_questions_all.json": "d077c4081f6ac0b2832001475fd3863bac645fe9f3252a5cdd044e66e071f566",
+    "external_reference.jsonl": "ee3ac1160cc4438b548bc0c5cb23e062e8eed7419f50c6c87990c03aca8e422f"
+  }
+}

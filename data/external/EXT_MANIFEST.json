@@ -1,0 +1,62 @@
+{
+  "created": "2026-10-27T23:55:50+00:00",
+  "questions_all": 300,
+  "questions_included": 300,
+  "excluded": {},
+  "dedupe": {
+    "n_train_cases": 6062,
+    "threshold": 0.85,
+    "max_sim_to_training": {
+      "max": 0.27523914351340034,
+      "median": 0.060620293910090634
+    }
+  },
+  "by_stratum_and_type": {
+    "classical/principle": 80,
+    "classical/diagnosis": 70,
+    "modern/principle": 72,
+    "modern/diagnosis": 78
+  },
+  "pairs": 6000,
+  "k": 20,
+  "corpus": "/home/<user>/UUM/EEE_research/experiments/stage4_retraining/actual_retrieval/retrieval_corpus.sqlite",
+  "corpus_docs": 1823418,
+  "retrieval": "BM25 char bigrams k1=1.2 b=0.75 over the full corpus; query = final question text only (same as scripts/server_build_pools.py)",
+  "reference_used_for_retrieval": false,
+  "own_record_filter": {
+    "thresholds": {
+      "containment": 0.6,
+      "herb_frac": 0.6,
+      "herb_min": 4,
+      "herb_containment": 0.2,
+      "clause_min_chars": 6,
+      "clause_long_chars": 10,
+      "clause_min_hits": 2
+    },
+    "candidates_excluded": {
+      "b_prescription": 2
+    },
+    "questions_with_exclusions": 2,
+    "kept_containment": {
+      "max": 0.5116,
+      "median": 0.0964
+    }
+  },
+  "contexts": {
+    "source_line_context_title_present": 5294,
+    "original_medical_train_fragment": 706
+  },
+  "seconds": 225.4,
+  "inputs": {
+    "questions_all": "d077c4081f6ac0b2832001475fd3863bac645fe9f3252a5cdd044e66e071f566",
+    "reference": "ee3ac1160cc4438b548bc0c5cb23e062e8eed7419f50c6c87990c03aca8e422f",
+    "stage4_dataset": "e117c403e9274f5265d6d9b2d8ae9c1de046741d1603995f63457b7e163b1fc2",
+    "split_manifest": "40d5d9a8081effd688797bcf6e7f14da94b09067c2411b750acca4dc94b7dfb9"
+  },
+  "script_sha256": "d52c7e318d83a74e8adab8f7112889dff39246c58cbb26c263d96593d2dcd929",
+  "outputs": {
+    "external_questions.json": "26bc6b1631c966dccecd76b0cd632075802dd45a94b2dfe92cf01a9c4eee561e",
+    "external_pools.jsonl": "e60153a6f84ad3e82bfb0c37ae93f5fdac03c38b84b39d155a74f58d78de43a1",
+    "pool_filter_log.jsonl": "be8ee107f309df640c7b7b4f6038bbc6352ba4b4c662665dd20cc80a2382a409"
+  }
+}

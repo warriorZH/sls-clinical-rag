@@ -1,0 +1,715 @@
+{
+  "target": "sealed",
+  "created": "2026-10-26T09:17:29+00:00",
+  "inputs": {
+    "questions_file": "/home/<user>/UUM/EEE_research/expert_testset_v1/_sealed_负责人保存_勿发给标注员/final_questions.json",
+    "pools_file": "/home/<user>/UUM/EEE_research/expert_testset_v1/_sealed_负责人保存_勿发给标注员/sealed_pools.jsonl",
+    "questions_sha256": "af0b2b4d34a84a4be57524c84788df938e295fd3e9afd263b25d7b7c70b5aeb3",
+    "pools_sha256": "6c228959456ad06765adc84f86811eb0abe410901769fe5013bd7d6559de4659",
+    "n_questions": 176,
+    "n_pairs": 3520,
+    "empty_evidence": 0
+  },
+  "runs": {
+    "support_ce_s42": {
+      "name": "support_ce_s42",
+      "method": "Support-CE",
+      "seed": 42,
+      "kind": "eee_ce_pt",
+      "spec": {
+        "name": "support_ce_s42",
+        "method": "Support-CE",
+        "seed": 42,
+        "kind": "eee_ce_pt",
+        "path": "/home/<user>/UUM/EEE_research/experiments/stage4_retraining/support_42/best_checkpoint.pt",
+        "max_length": 512,
+        "dtype": "fp32",
+        "positive_index": null,
+        "pair_order": null,
+        "truncation": null,
+        "query_prefix": null,
+        "passage_prefix": null,
+        "instruction": null,
+        "base_model": "/home/<user>/models/mdeberta-v3-base",
+        "spm": "/home/<user>/models/mdeberta-v3-base/spm.model",
+        "query_max_tokens": 160,
+        "micro": 4
+      },
+      "spec_sha256": "b1c015a4f189fa656d999e4d93c55f4da6b0df8cfe1c813248fd93fb0868ee5d",
+      "started": "2026-10-26T09:17:31+00:00",
+      "device": "cuda",
+      "env": {
+        "python": "3.10.12",
+        "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+        "host": "<gpu-host>",
+        "torch": "2.7.1+cu118",
+        "cuda_available": true,
+        "gpus": [
+          "Tesla P40 (24 GB)",
+          "Tesla P40 (22 GB)"
+        ],
+        "transformers": "5.19.0",
+        "HF_ENDPOINT": "https://hf-mirror.com"
+      },
+      "script_sha256": "16bd4f13b8c7adbb4a12a9941efb9a36d20f26984ee4a0da2734e3fc0acb46d3",
+      "config_sha256": "a8711396b91c7feab5c5d7f26d4974f4f7d8cd446c41bf71ce6c8c1c17f49674",
+      "inputs": {
+        "questions_sha256": "af0b2b4d34a84a4be57524c84788df938e295fd3e9afd263b25d7b7c70b5aeb3",
+        "pools_sha256": "6c228959456ad06765adc84f86811eb0abe410901769fe5013bd7d6559de4659"
+      },
+      "resolved_path": "/home/<user>/UUM/EEE_research/experiments/stage4_retraining/support_42/best_checkpoint.pt",
+      "weights_sha256": {
+        "best_checkpoint.pt": "0630bb3815978f0080e5a82dc1b6fb217f66c65b6c36e7a0f497da86c831baa9"
+      },
+      "base_files_sha256": {
+        "config.json": "bcffcd343dc5efa5ef2d5a58d2b405eed108f01cc45b48d0a907b333ec41801f",
+        "spm.model": "13c8d666d62a7bc4ac8f040aab68e942c861f93303156cc28f5c7e885d86d6e3"
+      },
+      "info": {
+        "base_model": "/home/<user>/models/mdeberta-v3-base",
+        "checkpoint_epoch": 2,
+        "checkpoint_step": 3304,
+        "train_config": {
+          "objective": "support",
+          "seed": 42,
+          "max_length": 512,
+          "precision": "fp32",
+          "model": "/home/<user>/models/mdeberta-v3-base",
+          "gpu": "Tesla P40"
+        },
+        "score": "softmax(logits)[:,1]",
+        "encoding": "[1]+spm(q)[:160]+[2]+spm(e)[:512-3-len(q)]+[2]",
+        "n_truncated": 1360,
+        "micro": 4,
+        "dtype_used": "fp32"
+      },
+      "status": "ok",
+      "n_pairs": 3520,
+      "score_min": 0.0045649586245417595,
+      "score_max": 0.9986250400543213,
+      "score_mean": 0.14797107841943877,
+      "questions_all_tied": 0,
+      "scores_sha256": "b542cb2e138b94311a99dc881773a457730c1f89dc02623c781326101a87692b",
+      "finished": "2026-10-26T09:23:43+00:00",
+      "seconds": 372.0
+    },
+    "support_ce_s2026": {
+      "name": "support_ce_s2026",
+      "method": "Support-CE",
+      "seed": 2026,
+      "kind": "eee_ce_pt",
+      "spec": {
+        "name": "support_ce_s2026",
+        "method": "Support-CE",
+        "seed": 2026,
+        "kind": "eee_ce_pt",
+        "path": "/home/<user>/UUM/EEE_research/experiments/stage4_retraining/support_2026/best_checkpoint.pt",
+        "max_length": 512,
+        "dtype": "fp32",
+        "positive_index": null,
+        "pair_order": null,
+        "truncation": null,
+        "query_prefix": null,
+        "passage_prefix": null,
+        "instruction": null,
+        "base_model": "/home/<user>/models/mdeberta-v3-base",
+        "spm": "/home/<user>/models/mdeberta-v3-base/spm.model",
+        "query_max_tokens": 160,
+        "micro": 4
+      },
+      "spec_sha256": "044ca1c20ebf01330551113c9d42f6206a3b8ea37d4116708abeb5a459f4cc09",
+      "started": "2026-10-26T09:23:43+00:00",
+      "device": "cuda",
+      "env": {
+        "python": "3.10.12",
+        "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+        "host": "<gpu-host>",
+        "torch": "2.7.1+cu118",
+        "cuda_available": true,
+        "gpus": [
+          "Tesla P40 (24 GB)",
+          "Tesla P40 (22 GB)"
+        ],
+        "transformers": "5.19.0",
+        "HF_ENDPOINT": "https://hf-mirror.com"
+      },
+      "script_sha256": "16bd4f13b8c7adbb4a12a9941efb9a36d20f26984ee4a0da2734e3fc0acb46d3",
+      "config_sha256": "a8711396b91c7feab5c5d7f26d4974f4f7d8cd446c41bf71ce6c8c1c17f49674",
+      "inputs": {
+        "questions_sha256": "af0b2b4d34a84a4be57524c84788df938e295fd3e9afd263b25d7b7c70b5aeb3",
+        "pools_sha256": "6c228959456ad06765adc84f86811eb0abe410901769fe5013bd7d6559de4659"
+      },
+      "resolved_path": "/home/<user>/UUM/EEE_research/experiments/stage4_retraining/support_2026/best_checkpoint.pt",
+      "weights_sha256": {
+        "best_checkpoint.pt": "4725cd356726a5904eb275fff9a1cfc16d5f5e25dc36e467362886cf432f3273"
+      },
+      "base_files_sha256": {
+        "config.json": "bcffcd343dc5efa5ef2d5a58d2b405eed108f01cc45b48d0a907b333ec41801f",
+        "spm.model": "13c8d666d62a7bc4ac8f040aab68e942c861f93303156cc28f5c7e885d86d6e3"
+      },
+      "info": {
+        "base_model": "/home/<user>/models/mdeberta-v3-base",
+        "checkpoint_epoch": 2,
+        "checkpoint_step": 3304,
+        "train_config": {
+          "objective": "support",
+          "seed": 2026,
+          "max_length": 512,
+          "precision": "fp32",
+          "model": "/home/<user>/models/mdeberta-v3-base",
+          "gpu": "Tesla P40"
+        },
+        "score": "softmax(logits)[:,1]",
+        "encoding": "[1]+spm(q)[:160]+[2]+spm(e)[:512-3-len(q)]+[2]",
+        "n_truncated": 1360,
+        "micro": 4,
+        "dtype_used": "fp32"
+      },
+      "status": "ok",
+      "n_pairs": 3520,
+      "score_min": 0.004818527493625879,
+      "score_max": 0.998907208442688,
+      "score_mean": 0.19471111436300403,
+      "questions_all_tied": 0,
+      "scores_sha256": "ed8b4ebb066725f8d41e7f456a50f05edd4e2be91e602b0a9a4d4c4950a0f139",
+      "finished": "2026-10-26T09:24:58+00:00",
+      "seconds": 74.4
+    },
+    "support_ce_s3407": {
+      "name": "support_ce_s3407",
+      "method": "Support-CE",
+      "seed": 3407,
+      "kind": "eee_ce_pt",
+      "spec": {
+        "name": "support_ce_s3407",
+        "method": "Support-CE",
+        "seed": 3407,
+        "kind": "eee_ce_pt",
+        "path": "/home/<user>/UUM/EEE_research/experiments/stage4_retraining/support_3407/best_checkpoint.pt",
+        "max_length": 512,
+        "dtype": "fp32",
+        "positive_index": null,
+        "pair_order": null,
+        "truncation": null,
+        "query_prefix": null,
+        "passage_prefix": null,
+        "instruction": null,
+        "base_model": "/home/<user>/models/mdeberta-v3-base",
+        "spm": "/home/<user>/models/mdeberta-v3-base/spm.model",
+        "query_max_tokens": 160,
+        "micro": 4
+      },
+      "spec_sha256": "62f7f6c0fc26a8273e12467d9142d89ab8d220209cba4c7854a62238046d7225",
+      "started": "2026-10-26T09:24:58+00:00",
+      "device": "cuda",
+      "env": {
+        "python": "3.10.12",
+        "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+        "host": "<gpu-host>",
+        "torch": "2.7.1+cu118",
+        "cuda_available": true,
+        "gpus": [
+          "Tesla P40 (24 GB)",
+          "Tesla P40 (22 GB)"
+        ],
+        "transformers": "5.19.0",
+        "HF_ENDPOINT": "https://hf-mirror.com"
+      },
+      "script_sha256": "16bd4f13b8c7adbb4a12a9941efb9a36d20f26984ee4a0da2734e3fc0acb46d3",
+      "config_sha256": "a8711396b91c7feab5c5d7f26d4974f4f7d8cd446c41bf71ce6c8c1c17f49674",
+      "inputs": {
+        "questions_sha256": "af0b2b4d34a84a4be57524c84788df938e295fd3e9afd263b25d7b7c70b5aeb3",
+        "pools_sha256": "6c228959456ad06765adc84f86811eb0abe410901769fe5013bd7d6559de4659"
+      },
+      "resolved_path": "/home/<user>/UUM/EEE_research/experiments/stage4_retraining/support_3407/best_checkpoint.pt",
+      "weights_sha256": {
+        "best_checkpoint.pt": "327310130c02ffcf3f7618629dfa13eabc6d4bf5920691331aba5a5432f901f5"
+      },
+      "base_files_sha256": {
+        "config.json": "bcffcd343dc5efa5ef2d5a58d2b405eed108f01cc45b48d0a907b333ec41801f",
+        "spm.model": "13c8d666d62a7bc4ac8f040aab68e942c861f93303156cc28f5c7e885d86d6e3"
+      },
+      "info": {
+        "base_model": "/home/<user>/models/mdeberta-v3-base",
+        "checkpoint_epoch": 3,
+        "checkpoint_step": 4956,
+        "train_config": {
+          "objective": "support",
+          "seed": 3407,
+          "max_length": 512,
+          "precision": "fp32",
+          "model": "/home/<user>/models/mdeberta-v3-base",
+          "gpu": "Tesla P40"
+        },
+        "score": "softmax(logits)[:,1]",
+        "encoding": "[1]+spm(q)[:160]+[2]+spm(e)[:512-3-len(q)]+[2]",
+        "n_truncated": 1360,
+        "micro": 4,
+        "dtype_used": "fp32"
+      },
+      "status": "ok",
+      "n_pairs": 3520,
+      "score_min": 0.0028080721385776997,
+      "score_max": 0.9992132186889648,
+      "score_mean": 0.14831897502808716,
+      "questions_all_tied": 0,
+      "scores_sha256": "75cb889620ec5df9b470c9c9f3066806d087bc6a2bd70162106609a2cf94b84d",
+      "finished": "2026-10-26T09:26:12+00:00",
+      "seconds": 74.7
+    },
+    "relevance_ce_s42": {
+      "name": "relevance_ce_s42",
+      "method": "Relevance-CE",
+      "seed": 42,
+      "kind": "eee_ce_pt",
+      "spec": {
+        "name": "relevance_ce_s42",
+        "method": "Relevance-CE",
+        "seed": 42,
+        "kind": "eee_ce_pt",
+        "path": "/home/<user>/UUM/EEE_research/experiments/stage4_retraining/relevance_42/best_checkpoint.pt",
+        "max_length": 512,
+        "dtype": "fp32",
+        "positive_index": null,
+        "pair_order": null,
+        "truncation": null,
+        "query_prefix": null,
+        "passage_prefix": null,
+        "instruction": null,
+        "base_model": "/home/<user>/models/mdeberta-v3-base",
+        "spm": "/home/<user>/models/mdeberta-v3-base/spm.model",
+        "query_max_tokens": 160,
+        "micro": 4
+      },
+      "spec_sha256": "ca4b1c15b20ba6118cf429957ec30beb0b8fb56eea834d8117ea713f7e6e4734",
+      "started": "2026-10-26T09:26:12+00:00",
+      "device": "cuda",
+      "env": {
+        "python": "3.10.12",
+        "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+        "host": "<gpu-host>",
+        "torch": "2.7.1+cu118",
+        "cuda_available": true,
+        "gpus": [
+          "Tesla P40 (24 GB)",
+          "Tesla P40 (22 GB)"
+        ],
+        "transformers": "5.19.0",
+        "HF_ENDPOINT": "https://hf-mirror.com"
+      },
+      "script_sha256": "16bd4f13b8c7adbb4a12a9941efb9a36d20f26984ee4a0da2734e3fc0acb46d3",
+      "config_sha256": "a8711396b91c7feab5c5d7f26d4974f4f7d8cd446c41bf71ce6c8c1c17f49674",
+      "inputs": {
+        "questions_sha256": "af0b2b4d34a84a4be57524c84788df938e295fd3e9afd263b25d7b7c70b5aeb3",
+        "pools_sha256": "6c228959456ad06765adc84f86811eb0abe410901769fe5013bd7d6559de4659"
+      },
+      "resolved_path": "/home/<user>/UUM/EEE_research/experiments/stage4_retraining/relevance_42/best_checkpoint.pt",
+      "weights_sha256": {
+        "best_checkpoint.pt": "ee3f8c92845b7cb95adec925dacf877f417398c6754f375c531bd6311a113069"
+      },
+      "base_files_sha256": {
+        "config.json": "bcffcd343dc5efa5ef2d5a58d2b405eed108f01cc45b48d0a907b333ec41801f",
+        "spm.model": "13c8d666d62a7bc4ac8f040aab68e942c861f93303156cc28f5c7e885d86d6e3"
+      },
+      "info": {
+        "base_model": "/home/<user>/models/mdeberta-v3-base",
+        "checkpoint_epoch": 3,
+        "checkpoint_step": 4956,
+        "train_config": {
+          "objective": "relevance",
+          "seed": 42,
+          "max_length": 512,
+          "precision": "fp32",
+          "model": "/home/<user>/models/mdeberta-v3-base",
+          "gpu": "Tesla P40"
+        },
+        "score": "softmax(logits)[:,1]",
+        "encoding": "[1]+spm(q)[:160]+[2]+spm(e)[:512-3-len(q)]+[2]",
+        "n_truncated": 1360,
+        "micro": 4,
+        "dtype_used": "fp32"
+      },
+      "status": "ok",
+      "n_pairs": 3520,
+      "score_min": 0.011722776107490063,
+      "score_max": 0.9998922348022461,
+      "score_mean": 0.9948730842257977,
+      "questions_all_tied": 0,
+      "scores_sha256": "15591f863d127afce7c1b28775205a008c12763b49bc5ceeeaf25c193babe6a0",
+      "finished": "2026-10-26T09:27:27+00:00",
+      "seconds": 74.7
+    },
+    "relevance_ce_s2026": {
+      "name": "relevance_ce_s2026",
+      "method": "Relevance-CE",
+      "seed": 2026,
+      "kind": "eee_ce_pt",
+      "spec": {
+        "name": "relevance_ce_s2026",
+        "method": "Relevance-CE",
+        "seed": 2026,
+        "kind": "eee_ce_pt",
+        "path": "/home/<user>/UUM/EEE_research/experiments/stage4_retraining/relevance_2026/best_checkpoint.pt",
+        "max_length": 512,
+        "dtype": "fp32",
+        "positive_index": null,
+        "pair_order": null,
+        "truncation": null,
+        "query_prefix": null,
+        "passage_prefix": null,
+        "instruction": null,
+        "base_model": "/home/<user>/models/mdeberta-v3-base",
+        "spm": "/home/<user>/models/mdeberta-v3-base/spm.model",
+        "query_max_tokens": 160,
+        "micro": 4
+      },
+      "spec_sha256": "c245c3f9fef0498747b7edf9e0cfcafbc436211792c42fd0940fccde14e928e3",
+      "started": "2026-10-26T09:27:27+00:00",
+      "device": "cuda",
+      "env": {
+        "python": "3.10.12",
+        "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+        "host": "<gpu-host>",
+        "torch": "2.7.1+cu118",
+        "cuda_available": true,
+        "gpus": [
+          "Tesla P40 (24 GB)",
+          "Tesla P40 (22 GB)"
+        ],
+        "transformers": "5.19.0",
+        "HF_ENDPOINT": "https://hf-mirror.com"
+      },
+      "script_sha256": "16bd4f13b8c7adbb4a12a9941efb9a36d20f26984ee4a0da2734e3fc0acb46d3",
+      "config_sha256": "a8711396b91c7feab5c5d7f26d4974f4f7d8cd446c41bf71ce6c8c1c17f49674",
+      "inputs": {
+        "questions_sha256": "af0b2b4d34a84a4be57524c84788df938e295fd3e9afd263b25d7b7c70b5aeb3",
+        "pools_sha256": "6c228959456ad06765adc84f86811eb0abe410901769fe5013bd7d6559de4659"
+      },
+      "resolved_path": "/home/<user>/UUM/EEE_research/experiments/stage4_retraining/relevance_2026/best_checkpoint.pt",
+      "weights_sha256": {
+        "best_checkpoint.pt": "24377345e25b5bb0620183d96d49f0c8521a4b1056aba77b77fa49905751f0a5"
+      },
+      "base_files_sha256": {
+        "config.json": "bcffcd343dc5efa5ef2d5a58d2b405eed108f01cc45b48d0a907b333ec41801f",
+        "spm.model": "13c8d666d62a7bc4ac8f040aab68e942c861f93303156cc28f5c7e885d86d6e3"
+      },
+      "info": {
+        "base_model": "/home/<user>/models/mdeberta-v3-base",
+        "checkpoint_epoch": 1,
+        "checkpoint_step": 1652,
+        "train_config": {
+          "objective": "relevance",
+          "seed": 2026,
+          "max_length": 512,
+          "precision": "fp32",
+          "model": "/home/<user>/models/mdeberta-v3-base",
+          "gpu": "Tesla P40"
+        },
+        "score": "softmax(logits)[:,1]",
+        "encoding": "[1]+spm(q)[:160]+[2]+spm(e)[:512-3-len(q)]+[2]",
+        "n_truncated": 1360,
+        "micro": 4,
+        "dtype_used": "fp32"
+      },
+      "status": "ok",
+      "n_pairs": 3520,
+      "score_min": 0.07888897508382797,
+      "score_max": 0.999488353729248,
+      "score_mean": 0.9906958135649223,
+      "questions_all_tied": 0,
+      "scores_sha256": "14cd206471710aa612724280e4a7843ca9f371fe85d999102af227d482aca229",
+      "finished": "2026-10-26T09:28:42+00:00",
+      "seconds": 74.6
+    },
+    "relevance_ce_s3407": {
+      "name": "relevance_ce_s3407",
+      "method": "Relevance-CE",
+      "seed": 3407,
+      "kind": "eee_ce_pt",
+      "spec": {
+        "name": "relevance_ce_s3407",
+        "method": "Relevance-CE",
+        "seed": 3407,
+        "kind": "eee_ce_pt",
+        "path": "/home/<user>/UUM/EEE_research/experiments/stage4_retraining/relevance_3407/best_checkpoint.pt",
+        "max_length": 512,
+        "dtype": "fp32",
+        "positive_index": null,
+        "pair_order": null,
+        "truncation": null,
+        "query_prefix": null,
+        "passage_prefix": null,
+        "instruction": null,
+        "base_model": "/home/<user>/models/mdeberta-v3-base",
+        "spm": "/home/<user>/models/mdeberta-v3-base/spm.model",
+        "query_max_tokens": 160,
+        "micro": 4
+      },
+      "spec_sha256": "c90102c2716b79d6ef5594416beb29f7823a98fe54b9adfd6cca4f2a2b8ce7fc",
+      "started": "2026-10-26T09:28:42+00:00",
+      "device": "cuda",
+      "env": {
+        "python": "3.10.12",
+        "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+        "host": "<gpu-host>",
+        "torch": "2.7.1+cu118",
+        "cuda_available": true,
+        "gpus": [
+          "Tesla P40 (24 GB)",
+          "Tesla P40 (22 GB)"
+        ],
+        "transformers": "5.19.0",
+        "HF_ENDPOINT": "https://hf-mirror.com"
+      },
+      "script_sha256": "16bd4f13b8c7adbb4a12a9941efb9a36d20f26984ee4a0da2734e3fc0acb46d3",
+      "config_sha256": "a8711396b91c7feab5c5d7f26d4974f4f7d8cd446c41bf71ce6c8c1c17f49674",
+      "inputs": {
+        "questions_sha256": "af0b2b4d34a84a4be57524c84788df938e295fd3e9afd263b25d7b7c70b5aeb3",
+        "pools_sha256": "6c228959456ad06765adc84f86811eb0abe410901769fe5013bd7d6559de4659"
+      },
+      "resolved_path": "/home/<user>/UUM/EEE_research/experiments/stage4_retraining/relevance_3407/best_checkpoint.pt",
+      "weights_sha256": {
+        "best_checkpoint.pt": "f7e164ae719999c7e2105ab790a492df8832dba8ce6a79bb12bcfa4b4f53241f"
+      },
+      "base_files_sha256": {
+        "config.json": "bcffcd343dc5efa5ef2d5a58d2b405eed108f01cc45b48d0a907b333ec41801f",
+        "spm.model": "13c8d666d62a7bc4ac8f040aab68e942c861f93303156cc28f5c7e885d86d6e3"
+      },
+      "info": {
+        "base_model": "/home/<user>/models/mdeberta-v3-base",
+        "checkpoint_epoch": 1,
+        "checkpoint_step": 1652,
+        "train_config": {
+          "objective": "relevance",
+          "seed": 3407,
+          "max_length": 512,
+          "precision": "fp32",
+          "model": "/home/<user>/models/mdeberta-v3-base",
+          "gpu": "Tesla P40"
+        },
+        "score": "softmax(logits)[:,1]",
+        "encoding": "[1]+spm(q)[:160]+[2]+spm(e)[:512-3-len(q)]+[2]",
+        "n_truncated": 1360,
+        "micro": 4,
+        "dtype_used": "fp32"
+      },
+      "status": "ok",
+      "n_pairs": 3520,
+      "score_min": 0.054873377084732056,
+      "score_max": 0.9991167187690735,
+      "score_mean": 0.987346744206099,
+      "questions_all_tied": 0,
+      "scores_sha256": "070498255e0a9b70b7e2f5b175a60fc25acd1cf9197d6c84c0cb8143c0410a7b",
+      "finished": "2026-10-26T09:29:56+00:00",
+      "seconds": 74.6
+    },
+    "bm25": {
+      "name": "bm25",
+      "method": "BM25",
+      "seed": null,
+      "kind": "bm25_rank",
+      "spec": {
+        "name": "bm25",
+        "method": "BM25",
+        "seed": null,
+        "kind": "bm25_rank",
+        "path": null,
+        "max_length": null,
+        "dtype": null,
+        "positive_index": null,
+        "pair_order": null,
+        "truncation": null,
+        "query_prefix": null,
+        "passage_prefix": null,
+        "instruction": null,
+        "base_model": null,
+        "spm": null,
+        "query_max_tokens": null,
+        "micro": null
+      },
+      "spec_sha256": "4b8c3a10fdde653b4bc787a9735653a0fffbcaa8ea2ab022e87a02e07d3d94c0",
+      "started": "2026-10-26T09:29:56+00:00",
+      "device": "cuda",
+      "env": {
+        "python": "3.10.12",
+        "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+        "host": "<gpu-host>",
+        "torch": "2.7.1+cu118",
+        "cuda_available": true,
+        "gpus": [
+          "Tesla P40 (24 GB)",
+          "Tesla P40 (22 GB)"
+        ],
+        "transformers": "5.19.0",
+        "HF_ENDPOINT": "https://hf-mirror.com"
+      },
+      "script_sha256": "16bd4f13b8c7adbb4a12a9941efb9a36d20f26984ee4a0da2734e3fc0acb46d3",
+      "config_sha256": "a8711396b91c7feab5c5d7f26d4974f4f7d8cd446c41bf71ce6c8c1c17f49674",
+      "inputs": {
+        "questions_sha256": "af0b2b4d34a84a4be57524c84788df938e295fd3e9afd263b25d7b7c70b5aeb3",
+        "pools_sha256": "6c228959456ad06765adc84f86811eb0abe410901769fe5013bd7d6559de4659"
+      },
+      "weights_sha256": {},
+      "info": {
+        "note": "分数为负的 BM25 名次"
+      },
+      "status": "ok",
+      "n_pairs": 3520,
+      "score_min": -20.0,
+      "score_max": -1.0,
+      "score_mean": -10.5,
+      "questions_all_tied": 0,
+      "scores_sha256": "c420aa84e913dab94b79d777eb7e723c57e00a1836c2599d71cb79396091abf0",
+      "finished": "2026-10-26T09:29:56+00:00",
+      "seconds": 0.1
+    },
+    "bge_reranker_v2_m3": {
+      "name": "bge_reranker_v2_m3",
+      "method": "bge-reranker-v2-m3",
+      "seed": null,
+      "kind": "hf_seqcls",
+      "spec": {
+        "name": "bge_reranker_v2_m3",
+        "method": "bge-reranker-v2-m3",
+        "seed": null,
+        "kind": "hf_seqcls",
+        "path": "/home/<user>/.cache/huggingface/hub/models--BAAI--bge-reranker-v2-m3/snapshots/953dc6f6f85a1b2dbfca4c34a2796e7dde08d41e",
+        "max_length": 1024,
+        "dtype": "fp32",
+        "positive_index": 0,
+        "pair_order": "query_first",
+        "truncation": "only_second",
+        "query_prefix": "",
+        "passage_prefix": "",
+        "instruction": null,
+        "base_model": null,
+        "spm": null,
+        "query_max_tokens": null,
+        "micro": null
+      },
+      "spec_sha256": "594d33d0a16b3bec7b5fba634cf15343043c1bf1324c197a73dca492bb72b944",
+      "started": "2026-10-26T09:29:56+00:00",
+      "device": "cuda",
+      "env": {
+        "python": "3.10.12",
+        "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+        "host": "<gpu-host>",
+        "torch": "2.7.1+cu118",
+        "cuda_available": true,
+        "gpus": [
+          "Tesla P40 (24 GB)",
+          "Tesla P40 (22 GB)"
+        ],
+        "transformers": "5.19.0",
+        "HF_ENDPOINT": "https://hf-mirror.com"
+      },
+      "script_sha256": "16bd4f13b8c7adbb4a12a9941efb9a36d20f26984ee4a0da2734e3fc0acb46d3",
+      "config_sha256": "a8711396b91c7feab5c5d7f26d4974f4f7d8cd446c41bf71ce6c8c1c17f49674",
+      "inputs": {
+        "questions_sha256": "af0b2b4d34a84a4be57524c84788df938e295fd3e9afd263b25d7b7c70b5aeb3",
+        "pools_sha256": "6c228959456ad06765adc84f86811eb0abe410901769fe5013bd7d6559de4659"
+      },
+      "resolved_path": "/home/<user>/.cache/huggingface/hub/models--BAAI--bge-reranker-v2-m3/snapshots/953dc6f6f85a1b2dbfca4c34a2796e7dde08d41e",
+      "hf_revision": null,
+      "weights_sha256": {
+        "model.safetensors": "d9e3e081faff1eefb84019509b2f5558fd74c1a05a2c7db22f74174fcedb5286"
+      },
+      "info": {
+        "num_labels": 1,
+        "id2label": {
+          "0": "LABEL_0"
+        },
+        "positive_index": null,
+        "score": "logit",
+        "max_length": 1024,
+        "truncation": "only_second",
+        "pair_order": "query_first",
+        "n_truncated": 0,
+        "longest_first_fallback": 0,
+        "tokenizer_class": "XLMRobertaTokenizer",
+        "dtype_used": "fp32"
+      },
+      "status": "ok",
+      "n_pairs": 3520,
+      "score_min": -11.002838134765625,
+      "score_max": 5.098995685577393,
+      "score_mean": -1.8002596661168024,
+      "questions_all_tied": 0,
+      "scores_sha256": "1d1f41688f65d5f6e8c01b2ca9cd2e1de800da1c1e204d78633f95835610f058",
+      "finished": "2026-10-26T09:33:17+00:00",
+      "seconds": 200.3
+    },
+    "qwen3_reranker_0_6b": {
+      "name": "qwen3_reranker_0_6b",
+      "method": "Qwen3-Reranker-0.6B",
+      "seed": null,
+      "kind": "qwen3_reranker",
+      "spec": {
+        "name": "qwen3_reranker_0_6b",
+        "method": "Qwen3-Reranker-0.6B",
+        "seed": null,
+        "kind": "qwen3_reranker",
+        "path": "/home/<user>/.cache/huggingface/hub/models--Qwen--Qwen3-Reranker-0.6B/snapshots/e61197ed45024b0ed8a2d74b80b4d909f1255473",
+        "max_length": 2048,
+        "dtype": "fp32",
+        "positive_index": null,
+        "pair_order": null,
+        "truncation": null,
+        "query_prefix": null,
+        "passage_prefix": null,
+        "instruction": "Given a Traditional Chinese Medicine clinical case and a question about it, retrieve passages that help answer the question",
+        "base_model": null,
+        "spm": null,
+        "query_max_tokens": null,
+        "micro": null
+      },
+      "spec_sha256": "afc6fedd6fbbbc4ae7bfc693470836d300c29848e7940e09a79e64e46bfc8243",
+      "started": "2026-10-26T09:33:17+00:00",
+      "device": "cuda",
+      "env": {
+        "python": "3.10.12",
+        "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+        "host": "<gpu-host>",
+        "torch": "2.7.1+cu118",
+        "cuda_available": true,
+        "gpus": [
+          "Tesla P40 (24 GB)",
+          "Tesla P40 (22 GB)"
+        ],
+        "transformers": "5.19.0",
+        "HF_ENDPOINT": "https://hf-mirror.com"
+      },
+      "script_sha256": "16bd4f13b8c7adbb4a12a9941efb9a36d20f26984ee4a0da2734e3fc0acb46d3",
+      "config_sha256": "a8711396b91c7feab5c5d7f26d4974f4f7d8cd446c41bf71ce6c8c1c17f49674",
+      "inputs": {
+        "questions_sha256": "af0b2b4d34a84a4be57524c84788df938e295fd3e9afd263b25d7b7c70b5aeb3",
+        "pools_sha256": "6c228959456ad06765adc84f86811eb0abe410901769fe5013bd7d6559de4659"
+      },
+      "resolved_path": "/home/<user>/.cache/huggingface/hub/models--Qwen--Qwen3-Reranker-0.6B/snapshots/e61197ed45024b0ed8a2d74b80b4d909f1255473",
+      "hf_revision": null,
+      "weights_sha256": {
+        "model.safetensors": "27cd75a405b9c1b46b59abfd88aaa209e6fed2a1972cde9b70e7659537c5e65b"
+      },
+      "info": {
+        "score": "log P(yes)",
+        "instruction": "Given a Traditional Chinese Medicine clinical case and a question about it, retrieve passages that help answer the question",
+        "max_length": 2048,
+        "n_truncated": 0,
+        "yes_id": 9693,
+        "no_id": 2152,
+        "dtype_used": "fp32"
+      },
+      "status": "ok",
+      "n_pairs": 3520,
+      "score_min": -11.287954330444336,
+      "score_max": -0.0003634030872490257,
+      "score_mean": -3.9679399270290396,
+      "questions_all_tied": 0,
+      "scores_sha256": "af22e031add380b7313253ebb912b9cd8fcb132ccde16d2638cd78c186549f4d",
+      "finished": "2026-10-26T09:39:08+00:00",
+      "seconds": 351.3
+    }
+  },
+  "reruns": [],
+  "skipped": []
+}

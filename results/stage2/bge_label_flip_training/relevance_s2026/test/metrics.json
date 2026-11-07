@@ -1,0 +1,177 @@
+{
+  "evaluation_version": 2,
+  "tie_break": "seed42_hash_not_candidate_order",
+  "threshold": 0.95,
+  "reports": {
+    "all": {
+      "classification": {
+        "pairs": 5030,
+        "support_prevalence": 0.5642147117296222,
+        "auprc": 0.6441899277531907,
+        "auroc": 0.5981519382416938,
+        "macro_f1": 0.5982266706195,
+        "f1": 0.7637285271754435,
+        "precision": 0.6360225140712945,
+        "recall": 0.9556025369978859,
+        "confusion_matrix": [
+          [
+            640,
+            1552
+          ],
+          [
+            126,
+            2712
+          ]
+        ]
+      },
+      "evidence_set": {
+        "questions": 1300,
+        "coverage": 0.9678333333333334,
+        "full_coverage": 0.9476923076923077,
+        "ndcg": 0.8385936517058535,
+        "mrr": 0.8017270159219312,
+        "positive_recall_top_m": 0.9795862265623436,
+        "empty": 0.002307692307692308,
+        "selected_count": 3.0984615384615384,
+        "negative_selection_rate": 0.3512909632571996,
+        "rankable_questions": 1298
+      }
+    },
+    "nonconstructed": {
+      "classification": {
+        "pairs": 5030,
+        "support_prevalence": 0.5642147117296222,
+        "auprc": 0.6441899277531907,
+        "auroc": 0.5981519382416938,
+        "macro_f1": 0.5982266706195,
+        "f1": 0.7637285271754435,
+        "precision": 0.6360225140712945,
+        "recall": 0.9556025369978859,
+        "confusion_matrix": [
+          [
+            640,
+            1552
+          ],
+          [
+            126,
+            2712
+          ]
+        ]
+      },
+      "evidence_set": {
+        "questions": 1300,
+        "coverage": 0.9678333333333334,
+        "full_coverage": 0.9476923076923077,
+        "ndcg": 0.8385936517058535,
+        "mrr": 0.8017270159219312,
+        "positive_recall_top_m": 0.9795862265623436,
+        "empty": 0.002307692307692308,
+        "selected_count": 3.0984615384615384,
+        "negative_selection_rate": 0.3512909632571996,
+        "rankable_questions": 1298
+      }
+    },
+    "med": {
+      "classification": {
+        "pairs": 4209,
+        "support_prevalence": 0.5982418626752197,
+        "auprc": 0.6459934661220987,
+        "auroc": 0.5340256246098464,
+        "macro_f1": 0.5603384813296737,
+        "f1": 0.7799080969735382,
+        "precision": 0.6488267861850777,
+        "recall": 0.97736298649722,
+        "confusion_matrix": [
+          [
+            359,
+            1332
+          ],
+          [
+            57,
+            2461
+          ]
+        ]
+      },
+      "evidence_set": {
+        "questions": 1233,
+        "coverage": 0.9746012435793459,
+        "full_coverage": 0.9562043795620438,
+        "ndcg": 0.8423588064210639,
+        "mrr": 0.8002162746688294,
+        "positive_recall_top_m": 0.9988510408218437,
+        "empty": 0.0,
+        "selected_count": 3.069748580697486,
+        "negative_selection_rate": 0.35059445178335535,
+        "rankable_questions": 1233
+      }
+    },
+    "hallu": {
+      "classification": {
+        "pairs": 821,
+        "support_prevalence": 0.38976857490864797,
+        "auprc": 0.5668066439155125,
+        "auroc": 0.71875623752495,
+        "macro_f1": 0.6475196132756733,
+        "f1": 0.6346396965865992,
+        "precision": 0.5329087048832272,
+        "recall": 0.784375,
+        "confusion_matrix": [
+          [
+            281,
+            220
+          ],
+          [
+            69,
+            251
+          ]
+        ]
+      },
+      "evidence_set": {
+        "questions": 67,
+        "coverage": 0.8432835820895522,
+        "full_coverage": 0.7910447761194029,
+        "ndcg": 0.7671715630311707,
+        "mrr": 0.8303846153846154,
+        "positive_recall_top_m": 0.6141475191475192,
+        "empty": 0.04477611940298507,
+        "selected_count": 3.626865671641791,
+        "negative_selection_rate": 0.36213991769547327,
+        "rankable_questions": 65
+      }
+    },
+    "relevant_negative_challenge": {
+      "classification": {
+        "pairs": 4409,
+        "support_prevalence": 0.6436833749149466,
+        "auprc": 0.6454769296664357,
+        "auroc": 0.4449380710723656,
+        "macro_f1": 0.4290068452744009,
+        "f1": 0.7701263666051399,
+        "precision": 0.6449464922711058,
+        "recall": 0.9556025369978859,
+        "confusion_matrix": [
+          [
+            78,
+            1493
+          ],
+          [
+            126,
+            2712
+          ]
+        ]
+      },
+      "evidence_set": {
+        "questions": 1300,
+        "coverage": 0.9678333333333334,
+        "full_coverage": 0.9476923076923077,
+        "ndcg": 0.8402470247948662,
+        "mrr": 0.8025744735490499,
+        "positive_recall_top_m": 0.9806391284627032,
+        "empty": 0.002307692307692308,
+        "selected_count": 3.0761538461538462,
+        "negative_selection_rate": 0.3460865216304076,
+        "rankable_questions": 1298
+      }
+    }
+  }
+}

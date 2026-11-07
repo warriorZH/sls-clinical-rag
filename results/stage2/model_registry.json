@@ -1,0 +1,218 @@
+{
+  "g1": {
+    "path": "/home/<user>/.cache/huggingface/hub/models--Qwen--Qwen3-4B-Instruct-2507/snapshots/cdbee75f17c01a7cc42f958dc650907174af0554",
+    "repo": "Qwen/Qwen3-4B-Instruct-2507",
+    "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+    "device_map": null,
+    "fallback": false,
+    "origin": "previous",
+    "weights_sha256": {
+      "model-00001-of-00003.safetensors": "75311d91bb08cf0b882913da464a1e722a31fb44db35208663487efb7a3d8ed6",
+      "model-00002-of-00003.safetensors": "0b48adbb1f60e901153d91907ba11ce63bd4b8b584482e730f48808d055dfba1",
+      "model-00003-of-00003.safetensors": "7dd39ccca5e4de123c74c14af44c9bf2eb75df33b4614382af0134528e060d5d"
+    },
+    "verified": {
+      "time": "2026-10-29T06:43:40+00:00",
+      "source": "hub",
+      "origin": "previous",
+      "files": {
+        "model-00001-of-00003.safetensors": {
+          "size": 3957900840,
+          "mtime_ns": 1793115500260879037,
+          "ino": 19795853
+        },
+        "model-00002-of-00003.safetensors": {
+          "size": 3987450520,
+          "mtime_ns": 1793115793777907141,
+          "ino": 19795825
+        },
+        "model-00003-of-00003.safetensors": {
+          "size": 99630640,
+          "mtime_ns": 1793112945577979594,
+          "ino": 19795805
+        },
+        "tokenizer.json": {
+          "size": 11422654,
+          "mtime_ns": 1792991488913594620,
+          "ino": 19795644
+        }
+      },
+      "hf_reference": "Qwen/Qwen3-4B-Instruct-2507",
+      "matches_hf": null
+    },
+    "time": "2026-10-29T06:43:40+00:00"
+  },
+  "judge_b": {
+    "path": "/home/<user>/models/Hunyuan-7B-Instruct",
+    "repo": "tencent/Hunyuan-7B-Instruct",
+    "revision": null,
+    "device_map": "auto",
+    "fallback": false,
+    "origin": "local",
+    "weights_sha256": {
+      "model-00001-of-00004.safetensors": "2c684f35f63b0a6a2749d04f8385e902be71a37e4042391de642e6d67e6249b5",
+      "model-00002-of-00004.safetensors": "110b72c63814f9405003d80abefbb5ce5e7b98eb23db733322075be4b7857f8c",
+      "model-00003-of-00004.safetensors": "6e4051b331f0078631868f9e30704ee1e8481b417b8675d1c183e3b5f12a3856",
+      "model-00004-of-00004.safetensors": "9ba9fb4b8ccdf3190b69a594cab77662f26a163256b0efb7611cffd4f96c63b8"
+    },
+    "verified": {
+      "time": "2026-10-29T06:45:44+00:00",
+      "source": "none",
+      "origin": "local",
+      "files": {
+        "model-00001-of-00004.safetensors": {
+          "size": 4975976336,
+          "mtime_ns": 1793251211491183955,
+          "ino": 22157425
+        },
+        "model-00002-of-00004.safetensors": {
+          "size": 4999811728,
+          "mtime_ns": 1793251313804461006,
+          "ino": 22157428
+        },
+        "model-00003-of-00004.safetensors": {
+          "size": 4915924448,
+          "mtime_ns": 1793251349303946551,
+          "ino": 22157427
+        },
+        "model-00004-of-00004.safetensors": {
+          "size": 117465544,
+          "mtime_ns": 1793248705737600557,
+          "ino": 22157426
+        }
+      },
+      "hf_reference": "tencent/Hunyuan-7B-Instruct",
+      "matches_hf": "identical",
+      "rejected": {
+        "/home/<user>/.cache/huggingface/hub/models--tencent--Hunyuan-7B-Instruct/snapshots/6fd6ecb05e76589bc43b79f49e3619445c6b4593": "model-00001-of-00004.safetensors：读取出错：OSError: [Errno 5] Input/output error"
+      }
+    },
+    "time": "2026-10-29T06:45:44+00:00"
+  },
+  "judge_a": {
+    "path": "/home/<user>/models/GLM-4-9B-0414",
+    "repo": "zai-org/GLM-4-9B-0414",
+    "revision": null,
+    "device_map": "auto",
+    "fallback": false,
+    "origin": "local",
+    "weights_sha256": {
+      "model-00001-of-00004.safetensors": "f428f8621a3b09c8dc85640d35b147fd52515c4de3eeed71a0bd24fe28a475e8",
+      "model-00002-of-00004.safetensors": "5fe3a4f6c126a8f831df97dcd3436660b5e744f7307b84e8512d4847c369b359",
+      "model-00003-of-00004.safetensors": "9716302a052d79c2750e3c98d34f4c4048871092831fc158cd89286513df83d9",
+      "model-00004-of-00004.safetensors": "d81b5e2c294f5f2aecd6c82ae522f86a4ce25c00d24bab19bb41386ab6874de4"
+    },
+    "verified": {
+      "time": "2026-10-29T06:44:09+00:00",
+      "source": "none",
+      "origin": "local",
+      "files": {
+        "model-00001-of-00004.safetensors": {
+          "size": 4984283160,
+          "mtime_ns": 1793251341579623250,
+          "ino": 22157411
+        },
+        "model-00002-of-00004.safetensors": {
+          "size": 4895274600,
+          "mtime_ns": 1793251262127299848,
+          "ino": 22157412
+        },
+        "model-00003-of-00004.safetensors": {
+          "size": 4895274616,
+          "mtime_ns": 1793251123092494745,
+          "ino": 22157413
+        },
+        "model-00004-of-00004.safetensors": {
+          "size": 4025786080,
+          "mtime_ns": 1793250871100020319,
+          "ino": 22157414
+        }
+      },
+      "hf_reference": "zai-org/GLM-4-9B-0414",
+      "matches_hf": "identical"
+    },
+    "time": "2026-10-29T06:44:09+00:00"
+  },
+  "qr4b": {
+    "path": "/home/<user>/.cache/huggingface/hub/models--Qwen--Qwen3-Reranker-4B/snapshots/22e683669bc0f0bd69640a1354a6d0aebcfeede5",
+    "repo": "Qwen/Qwen3-Reranker-4B",
+    "revision": "22e683669bc0f0bd69640a1354a6d0aebcfeede5",
+    "device_map": null,
+    "fallback": false,
+    "origin": "previous",
+    "weights_sha256": {
+      "model-00001-of-00002.safetensors": "cf2e87cbf71fa628961532232e04dd6c19702a0a057f5e2aff95ea1aca4fd488",
+      "model-00002-of-00002.safetensors": "78946d22b7f6456ea7a5358dbdf3982de36c5bac1f166a5fd58e18e31db8048a"
+    },
+    "verified": {
+      "time": "2026-10-29T06:44:04+00:00",
+      "source": "hub",
+      "origin": "previous",
+      "files": {
+        "model-00001-of-00002.safetensors": {
+          "size": 4058781760,
+          "mtime_ns": 1793145426261723027,
+          "ino": 19795761
+        },
+        "model-00002-of-00002.safetensors": {
+          "size": 3984833200,
+          "mtime_ns": 1793118326402214258,
+          "ino": 19797427
+        },
+        "tokenizer.json": {
+          "size": 11422654,
+          "mtime_ns": 1792991488913594620,
+          "ino": 19795644
+        }
+      },
+      "hf_reference": "Qwen/Qwen3-Reranker-4B",
+      "matches_hf": null
+    },
+    "time": "2026-10-29T06:44:04+00:00"
+  },
+  "g2": {
+    "path": "/home/<user>/models/GLM-4-9B-0414",
+    "repo": "zai-org/GLM-4-9B-0414",
+    "revision": null,
+    "device_map": "auto",
+    "fallback": false,
+    "origin": "local",
+    "weights_sha256": {
+      "model-00001-of-00004.safetensors": "f428f8621a3b09c8dc85640d35b147fd52515c4de3eeed71a0bd24fe28a475e8",
+      "model-00002-of-00004.safetensors": "5fe3a4f6c126a8f831df97dcd3436660b5e744f7307b84e8512d4847c369b359",
+      "model-00003-of-00004.safetensors": "9716302a052d79c2750e3c98d34f4c4048871092831fc158cd89286513df83d9",
+      "model-00004-of-00004.safetensors": "d81b5e2c294f5f2aecd6c82ae522f86a4ce25c00d24bab19bb41386ab6874de4"
+    },
+    "verified": {
+      "time": "2026-10-29T06:44:09+00:00",
+      "source": "none",
+      "origin": "local",
+      "files": {
+        "model-00001-of-00004.safetensors": {
+          "size": 4984283160,
+          "mtime_ns": 1793251341579623250,
+          "ino": 22157411
+        },
+        "model-00002-of-00004.safetensors": {
+          "size": 4895274600,
+          "mtime_ns": 1793251262127299848,
+          "ino": 22157412
+        },
+        "model-00003-of-00004.safetensors": {
+          "size": 4895274616,
+          "mtime_ns": 1793251123092494745,
+          "ino": 22157413
+        },
+        "model-00004-of-00004.safetensors": {
+          "size": 4025786080,
+          "mtime_ns": 1793250871100020319,
+          "ino": 22157414
+        }
+      },
+      "hf_reference": "zai-org/GLM-4-9B-0414",
+      "matches_hf": "identical",
+      "reused_from": "judge_a"
+    },
+    "time": "2026-10-29T06:44:10+00:00"
+  }
+}

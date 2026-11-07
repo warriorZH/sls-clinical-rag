@@ -1,0 +1,184 @@
+{
+  "_note": "eval_v2 补充分析（登记 v2.4-sup）的全部固定设置。登记后不修改；如需修改，启动器会把改动记入 logs/变更记录_sup.txt。",
+  "version": "v2.4-sup",
+  "models": {
+    "judge": {
+      "modelscope": "Qwen/Qwen3-32B",
+      "dir": "Qwen3-32B",
+      "served_name": "Qwen3-32B",
+      "port": 8002,
+      "reasoning_parser": "qwen3",
+      "max_model_len": 16384
+    },
+    "rm": {
+      "modelscope": "DYJGresearch/FangZheng-RM",
+      "dir": "FangZheng-RM",
+      "served_name": "Fangzheng-RM",
+      "port": 8001,
+      "reasoning_parser": "qwen3",
+      "max_model_len": 16384
+    },
+    "gen": {
+      "modelscope": "Qwen/Qwen3-4B-Instruct-2507",
+      "dir": "Qwen3-4B-Instruct-2507",
+      "served_name": "Qwen3-4B-Instruct-2507",
+      "port": 8003,
+      "reasoning_parser": null,
+      "max_model_len": 16384
+    }
+  },
+  "dtype": "bfloat16",
+  "vllm_seed": 0,
+  "serve": {
+    "_note": "服务分配与启动（补充登记第六节）。2 张 ≥76 GiB 的卡（RTX PRO 6000 96 GB / RTX 6000D 84 GB 等）：S1/S2 阶段评审独占 0 号卡，奖励模型与被测模型共用 1 号卡；S3 与 S4 评审阶段只开评审，两卡张量并行，失败时改为两卡各一个评审副本。4 张 ≥44 GB 的卡：评审占 0、1 号卡。启动失败时依次改用 enforce-eager、Triton 注意力后端。",
+    "util_judge_solo": 0.92,
+    "util_rm_shared": 0.5,
+    "util_gen_shared": 0.4,
+    "util_4card": 0.9,
+    "judge2_port": 8012,
+    "min_gib_2card": 76,
+    "min_gib_4card": 44,
+    "variants": [
+      "default",
+      "eager",
+      "triton"
+    ],
+    "start_timeout_sec": {
+      "judge": 1500,
+      "rm": 900,
+      "gen": 900
+    },
+    "stall_minutes": 30
+  },
+  "conditions": [
+    "X00",
+    "X01",
+    "X02_r1",
+    "X02_r2",
+    "X02_r3",
+    "X04_s42",
+    "X04_s2026",
+    "X04_s3407",
+    "X05_s42",
+    "X05_s2026",
+    "X05_s3407",
+    "X08",
+    "X09"
+  ],
+  "official": {
+    "skip_think": true,
+    "mc_option_seed": 42,
+    "workers": 48,
+    "max_attempts": 3,
+    "gen_max_tokens_cap": 4096
+  },
+  "rejudge": {
+    "enabled": true,
+    "workers": 64,
+    "enable_thinking": false,
+    "max_tokens": 2048,
+    "targets": [
+      "sealed",
+      "external"
+    ]
+  },
+  "stats": {
+    "bootstrap_reps": 10000,
+    "bootstrap_seed": 20261026,
+    "equivalence_delta": 0.05
+  },
+  "smoke": {
+    "official_cases": 3,
+    "official_conditions": [
+      "X00",
+      "X05_s42"
+    ],
+    "rejudge_answers": 6
+  },
+  "s4": {
+    "enabled": true,
+    "_note": "S4：用 stage4 的支持标签与相关性标签，分别以 LoRA 微调 Qwen3-Reranker-0.6B 与 4B（各 3 个种子），与原始权重（零样本）比较。补充登记第五节。",
+    "models": {
+      "q06": {
+        "modelscope": "Qwen/Qwen3-Reranker-0.6B",
+        "dir": "Qwen3-Reranker-0.6B",
+        "label": "0.6B"
+      },
+      "q4b": {
+        "modelscope": "Qwen/Qwen3-Reranker-4B",
+        "dir": "Qwen3-Reranker-4B",
+        "label": "4B"
+      }
+    },
+    "objectives": [
+      "support",
+      "relevance"
+    ],
+    "seeds": [
+      42,
+      2026,
+      3407
+    ],
+    "instruction": "Given a Traditional Chinese Medicine clinical case and a question about it, retrieve passages that help answer the question",
+    "lora": {
+      "r": 32,
+      "alpha": 64,
+      "dropout": 0.05,
+      "target_modules": [
+        "q_proj",
+        "k_proj",
+        "v_proj",
+        "o_proj",
+        "gate_proj",
+        "up_proj",
+        "down_proj"
+      ]
+    },
+    "train": {
+      "lr": 0.0001,
+      "weight_decay": 0.01,
+      "warmup_ratio": 0.1,
+      "epochs": 3,
+      "patience": 2,
+      "micro": 4,
+      "accum": 4,
+      "max_length": 1024,
+      "grad_clip": 1.0,
+      "dtype": "bf16",
+      "expected_train_pairs": 26432
+    },
+    "score": {
+      "max_length": 2048,
+      "batch_size": 16,
+      "dtype": "bf16"
+    },
+    "k": 2,
+    "gen": {
+      "prompt": "main",
+      "max_tokens": 768,
+      "temperature": 0.0,
+      "workers": 64
+    },
+    "reference": {
+      "sealed": [
+        "G00",
+        "G04_s42",
+        "G04_s2026",
+        "G04_s3407",
+        "G05_s42",
+        "G05_s2026",
+        "G05_s3407"
+      ],
+      "external": [
+        "X00",
+        "X04_s42",
+        "X04_s2026",
+        "X04_s3407",
+        "X05_s42",
+        "X05_s2026",
+        "X05_s3407"
+      ]
+    },
+    "mcq_workers": 48
+  }
+}

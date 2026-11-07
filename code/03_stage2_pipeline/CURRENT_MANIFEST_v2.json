@@ -1,0 +1,45 @@
+{
+    "created":  "2026-10-29T14:42:59+08:00",
+    "plan_version":  "v2.3",
+    "purpose":  "eval_v2 运行前的代码与方案冻结记录；与 实验设计方案_v2.md 一起上传 OSF。",
+    "data_frozen_in_v1":  {
+                              "final_questions.json":  "af0b2b4d34a84a4be57524c84788df938e295fd3e9afd263b25d7b7c70b5aeb3",
+                              "sealed_pools.jsonl":  "6c228959456ad06765adc84f86811eb0abe410901769fe5013bd7d6559de4659",
+                              "phase2_gold_labels.jsonl":  "1311d616353f78fb843bfae58d5338877b5d4ec836d0ccd6ab47ec58334f4e7a"
+                          },
+    "external_source":  {
+                            "TCM-BEST4SDT/TCM_SDT.json@60407f2":  "d94711ac60db83e3a33c2c46b1d6efbf072565a22e8fd464f5f61b444860de59"
+                        },
+    "files":  {
+                  "server/build_external.py":  "d52c7e318d83a74e8adab8f7112889dff39246c58cbb26c263d96593d2dcd929",
+                  "server/common.py":  "1c944a44f4c5b69663ffc78c00d452f5d466ee6fb5a014e958983834159dc104",
+                  "server/conditions.py":  "2f583c729cab5e5a05818a5d28ac812eb5ce651d894a9cc355dce86260ca0f6e",
+                  "server/config/judge_prompts.json":  "0a7b6b3728bdb9ed1d847ee9aff6609c7f7c8c31676d0a5ae3f31b28acbae297",
+                  "server/config/pipeline.json":  "43bcd72e6d0eb03ed8f2d142e9724ab70f23f3f6f48c8edda5ed26bb4a94f603",
+                  "server/config/prompts.json":  "db3c39483e606cf9c42b7175f9144cce8c94c6c370bcd83aabb56471a7d23e27",
+                  "server/data/external/BUILD_MANIFEST.json":  "8d535698606a3a246b5a2be0f46d09e61cfd52b686edc161f3aa73631a079c30",
+                  "server/data/external/external_questions_all.json":  "d077c4081f6ac0b2832001475fd3863bac645fe9f3252a5cdd044e66e071f566",
+                  "server/data/external/external_reference.jsonl":  "ee3ac1160cc4438b548bc0c5cb23e062e8eed7419f50c6c87990c03aca8e422f",
+                  "server/data/external/README.md":  "8b3e0c93de884036d6cdd4e6c20259e0b29da55e90b573cf2c23d5d348ffeca3",
+                  "server/data/oracle_lists.jsonl":  "77e3a6a62e538d2df61c443a9e844b0e58088cbc2dca9fb1a0ec2b9208377d6d",
+                  "server/data/oracle_lists_meta.json":  "1f551e78d2cf9ec297b4a3938b6e11cf1d15f802d5d617ac49b8286af3d12815",
+                  "server/env_check.py":  "5cb049172131679a152da51120b73eb87c5d20cbeb6ede290b57634b45bda0a1",
+                  "server/fetch_models.py":  "057dbe4b9e39aa1fe538bee9e5690d87e750c08d7ea50423579df618109c6e40",
+                  "server/freeze.py":  "c291e24927cf2868ed30d0c4e40db4fc13d3d3c09965a45cdd801a76552fb6b1",
+                  "server/generate.py":  "dfee4eebfc61f6ec864ee219897e14cecb9ce534976e8d8f2220f0ac705b0865",
+                  "server/inspect_qa.py":  "0a9e6d074b6ef8e292ce8ca88fb5505f139ea4540fb91b228cdcfaaf6b4fcdcb",
+                  "server/judge.py":  "9b15d3b825e5ad17d025061f45075d2fc4190e1710d22703dcd3b22e002f095d",
+                  "server/p40.py":  "eeb30620ec6272e816cb0b115b726bcf89b6395175bd8ef5e0d09489a00301f9",
+                  "server/pipeline.py":  "c5c41c6d912c7f37847561787e477c7676205a48188f65d1e728b9a3491ff43a",
+                  "server/run_v2.sh":  "a69f64ff104437e6cc982ab2c451149b87d557acf3e800592adb96b10cc9d784",
+                  "server/score_v2.py":  "130c9faa94a82337deedb836b705df0f30e4f7d2127d92f636091211f762f807",
+                  "server/select_evidence.py":  "7f69800a0ddd76acee226756172b888a6cdd5a77ac400609a9652a612ede75ec",
+                  "server/summarize.py":  "75d687f46b13df59aee0fb57fa982a9cdcf0ca8268c8552f559df484c98890b4",
+                  "server/train_bge.py":  "8aaf3415593884eae28d7298939245896a56c1a7bae6eab47c2c2f2c53104a2a",
+                  "实验设计方案_v2.md":  "2fdb2c1ee08ac1f194426961b493ae250665ba0ad5c30e6ea123e5cd821617da",
+                  "运行说明.md":  "581fdbcfc403b5328dd1d2d4afe868022b424403298e5b44bcda60745f5c9784",
+                  "analysis/build_oracle_lists.py":  "12cad3da63c8112a6529906b86284a2aee980404d1fca6854fd35445ba2d7626",
+                  "analysis/build_external_set.py":  "acc16c071686b679a11472e81dc3d92df94db836bb7afcf0801c001e40797c27",
+                  "tools/launcher.ps1":  "565de675e4179952cd42f75fd545153365db779d249c0612b9dcf7923348d559"
+              }
+}

@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this resource, please cite the paper and this release."
+title: "Relevant is not enough: support-label supervision for evidence selection in retrieval-augmented clinical question answering (data and code)"
+version: "{{RELEASE_TAG}}"
+date-released: "{{RELEASE_DATE}}"
+doi: "{{ZENODO_DOI}}"
+repository-code: "{{REPO_URL}}"
+license: "{{CODE_LICENSE}}"
+authors:
+{{CFF_AUTHORS}}
+preferred-citation:
+  type: article
+  title: "Relevant is not enough: Support-label supervision for evidence selection in retrieval-augmented clinical question answering"
+  journal: "{{JOURNAL}}"
+  year: "{{PAPER_YEAR}}"
+  authors:
+{{CFF_AUTHORS_INDENT}}

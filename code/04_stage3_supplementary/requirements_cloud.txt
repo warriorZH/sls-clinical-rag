@@ -1,0 +1,17 @@
+# 补充分析云端环境（登记 v2.4-sup）。vllm 0.11.0 会自动带上 torch 2.8.0（CUDA 12.8 版）、torchvision 0.23.0、xformers 0.0.32.post1。
+# 其余版本与 TCM-BEST4SDT 官方 requirements.txt 一致（transformers 4.56.1、openai 2.7.1、numpy 2.2.6、httpx 0.28.1、tqdm 4.67.1、matplotlib 3.10.7）。
+vllm==0.11.0
+transformers==4.56.1
+openai==2.7.1
+numpy==2.2.6
+httpx==0.28.1
+tqdm==4.67.1
+matplotlib==3.10.7
+modelscope==1.31.0
+# S4（Qwen3-Reranker 支持标签微调）所需
+peft==0.17.1
+accelerate==1.10.1
+# stage4 自带的评测函数（evaluate_v2.py、policy_stage4.py）可能用到的常用包
+scikit-learn==1.7.2
+scipy==1.15.3
+pandas==2.3.3

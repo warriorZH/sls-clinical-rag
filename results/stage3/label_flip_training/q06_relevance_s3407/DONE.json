@@ -1,0 +1,13 @@
+{
+ "best_epoch": 1,
+ "best_key": [
+  0.0,
+  0.6267445054945056,
+  0.43,
+  -0.3169230769230769
+ ],
+ "threshold": 0.8,
+ "total_steps": 4956,
+ "seconds": 4974.1,
+ "peak_memory_gib": 2.79
+}

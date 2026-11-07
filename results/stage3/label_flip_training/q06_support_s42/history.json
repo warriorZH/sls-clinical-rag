@@ -1,0 +1,140 @@
+[
+ {
+  "epoch": 1,
+  "step": 1652,
+  "dev_support": {
+   "pairs": 4978,
+   "support_prevalence": 0.56046605062274,
+   "auprc": 0.9857493761430529,
+   "auroc": 0.9804348253425331,
+   "macro_f1": 0.921707443044333,
+   "f1": 0.9303419576623847,
+   "precision": 0.9393496529046401,
+   "recall": 0.921505376344086,
+   "confusion_matrix": [
+    [
+     2022,
+     166
+    ],
+    [
+     219,
+     2571
+    ]
+   ]
+  },
+  "key": [
+   1.0,
+   0.9776923076923076,
+   0.9844871794871795,
+   -2.227692307692308
+  ],
+  "selected_policy": {
+   "threshold": 0.2,
+   "m": 4,
+   "feasible": true,
+   "questions": 1300,
+   "coverage": 0.9844871794871795,
+   "full_coverage": 0.9776923076923076,
+   "ndcg": 0.9904978430381779,
+   "mrr": 0.9957968401167783,
+   "positive_recall_top_m": 0.985107310686909,
+   "empty": 0.002307692307692308,
+   "selected_count": 2.227692307692308,
+   "negative_selection_rate": 0.09668508287292818,
+   "rankable_questions": 1294
+  },
+  "seconds": 1600.3
+ },
+ {
+  "epoch": 2,
+  "step": 3304,
+  "dev_support": {
+   "pairs": 4978,
+   "support_prevalence": 0.56046605062274,
+   "auprc": 0.9870858813460983,
+   "auroc": 0.9819930150118275,
+   "macro_f1": 0.9299628165647782,
+   "f1": 0.9371241115363587,
+   "precision": 0.9532814238042269,
+   "recall": 0.921505376344086,
+   "confusion_matrix": [
+    [
+     2062,
+     126
+    ],
+    [
+     219,
+     2571
+    ]
+   ]
+  },
+  "key": [
+   1.0,
+   0.9723076923076923,
+   0.98,
+   -2.2553846153846155
+  ],
+  "selected_policy": {
+   "threshold": 0.1,
+   "m": 6,
+   "feasible": true,
+   "questions": 1300,
+   "coverage": 0.98,
+   "full_coverage": 0.9723076923076923,
+   "ndcg": 0.9913524605183642,
+   "mrr": 0.993656620298815,
+   "positive_recall_top_m": 0.9926290114659512,
+   "empty": 0.004615384615384616,
+   "selected_count": 2.2553846153846155,
+   "negative_selection_rate": 0.09447476125511596,
+   "rankable_questions": 1294
+  },
+  "seconds": 3207.7
+ },
+ {
+  "epoch": 3,
+  "step": 4956,
+  "dev_support": {
+   "pairs": 4978,
+   "support_prevalence": 0.56046605062274,
+   "auprc": 0.9844594519193034,
+   "auroc": 0.9773020646995996,
+   "macro_f1": 0.9275553964723313,
+   "f1": 0.9357632623601588,
+   "precision": 0.9422238372093024,
+   "recall": 0.9293906810035842,
+   "confusion_matrix": [
+    [
+     2029,
+     159
+    ],
+    [
+     197,
+     2593
+    ]
+   ]
+  },
+  "key": [
+   1.0,
+   0.9623076923076923,
+   0.974871794871795,
+   -2.2184615384615385
+  ],
+  "selected_policy": {
+   "threshold": 0.05,
+   "m": 6,
+   "feasible": true,
+   "questions": 1300,
+   "coverage": 0.974871794871795,
+   "full_coverage": 0.9623076923076923,
+   "ndcg": 0.9905252239268229,
+   "mrr": 0.9935876205196144,
+   "positive_recall_top_m": 0.9924268909006159,
+   "empty": 0.0038461538461538464,
+   "selected_count": 2.2184615384615385,
+   "negative_selection_rate": 0.08599167822468794,
+   "rankable_questions": 1294
+  },
+  "seconds": 4824.5
+ }
+]

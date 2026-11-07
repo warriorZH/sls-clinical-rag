@@ -1,0 +1,205 @@
+{
+  "_note": "eval_v2 流水线配置（相对路径以 expert_testset_v1 为基准）。改动会改变冻结哈希，请在登记前定稿。",
+  "targets": {
+    "sealed": {
+      "questions": "_sealed_负责人保存_勿发给标注员/final_questions.json",
+      "pools": "_sealed_负责人保存_勿发给标注员/sealed_pools.jsonl",
+      "sha256": {
+        "questions": "af0b2b4d34a84a4be57524c84788df938e295fd3e9afd263b25d7b7c70b5aeb3",
+        "pools": "6c228959456ad06765adc84f86811eb0abe410901769fe5013bd7d6559de4659"
+      },
+      "n_questions": 176
+    },
+    "calib": {
+      "questions": "eval_v1/calib/calibration_questions.json",
+      "pools": "eval_v1/calib/calibration_pools.jsonl",
+      "sha256": {
+        "questions": "15ebdb0d02cc560e9d9b891169e73b5cf32935684e1cdd1d0c1049fb1192e71f",
+        "pools": "d77436300a56dfb08e60a5087b7fe523427161e0b283408835c48c637d68acc3"
+      },
+      "n_questions": 5
+    },
+    "external": {
+      "_note": "外部验证集（TCM-BEST4SDT）：由 ext_build 作业在服务器上生成一次，哈希记录在 EXT_MANIFEST.json，之后每次读取都核对",
+      "questions": "eval_v2/runs/external/external_questions.json",
+      "pools": "eval_v2/runs/external/external_pools.jsonl",
+      "manifest": "eval_v2/runs/external/EXT_MANIFEST.json"
+    }
+  },
+  "paths": {
+    "experiments_root": "/home/<user>/UUM/EEE_research/experiments",
+    "models_dir": "/home/<user>/models"
+  },
+  "external": {
+    "_note": "外部验证（方案第十六节）：题目由 analysis/build_external_set.py 从 TCM-BEST4SDT 转换；服务器上排除与 CE 训练病例近重复的病例，用与封存集相同的语料和 BM25 建候选池，并排除病例自身的原始记录",
+    "questions_all": "eval_v2/data/external/external_questions_all.json",
+    "reference": "eval_v2/data/external/external_reference.jsonl",
+    "corpus": "/home/<user>/UUM/EEE_research/experiments/stage4_retraining/actual_retrieval/retrieval_corpus.sqlite",
+    "dataset_root": "/home/<user>/UUM/EEE_research/dataset",
+    "stage4_dataset": "/home/<user>/UUM/EEE_research/experiments/stage4_retraining/dataset.json",
+    "split_manifest": "/home/<user>/UUM/EEE_research/experiments/stage4_retraining/split_manifest.json",
+    "k": 20,
+    "dup_threshold": 0.85,
+    "leak": {
+      "containment": 0.6,
+      "herb_frac": 0.6,
+      "herb_min": 4,
+      "herb_containment": 0.2,
+      "clause_min_chars": 6,
+      "clause_long_chars": 10,
+      "clause_min_hits": 2
+    }
+  },
+  "optional": {
+    "qwen3_reranker_4b": true,
+    "llm_selector": true,
+    "e2_finetune": true,
+    "g2_generator": true,
+    "external": true
+  },
+  "models": {
+    "g1": {
+      "repos": [
+        "Qwen/Qwen3-4B-Instruct-2507"
+      ],
+      "modelscope": "Qwen/Qwen3-4B-Instruct-2507"
+    },
+    "qr4b": {
+      "repos": [
+        "Qwen/Qwen3-Reranker-4B"
+      ],
+      "modelscope": "Qwen/Qwen3-Reranker-4B"
+    },
+    "g2": {
+      "repos": [
+        "zai-org/GLM-4-9B-0414",
+        "THUDM/GLM-4-9B-0414"
+      ],
+      "device_map": "auto",
+      "fallback_repos": [
+        "zai-org/glm-edge-4b-chat",
+        "THUDM/glm-edge-4b-chat"
+      ],
+      "modelscope": "ZhipuAI/GLM-4-9B-0414",
+      "fallback_modelscope": "ZhipuAI/glm-edge-4b-chat"
+    },
+    "judge_a": {
+      "repos": [
+        "zai-org/GLM-4-9B-0414",
+        "THUDM/GLM-4-9B-0414"
+      ],
+      "device_map": "auto",
+      "fallback_repos": [
+        "zai-org/glm-edge-4b-chat",
+        "THUDM/glm-edge-4b-chat"
+      ],
+      "modelscope": "ZhipuAI/GLM-4-9B-0414",
+      "fallback_modelscope": "ZhipuAI/glm-edge-4b-chat"
+    },
+    "judge_b": {
+      "repos": [
+        "tencent/Hunyuan-7B-Instruct"
+      ],
+      "device_map": "auto",
+      "fallback_repos": [
+        "tencent/Hunyuan-4B-Instruct"
+      ],
+      "modelscope": "Tencent-Hunyuan/Hunyuan-7B-Instruct",
+      "fallback_modelscope": "Tencent-Hunyuan/Hunyuan-4B-Instruct"
+    }
+  },
+  "generators": {
+    "G1": {
+      "model_key": "g1",
+      "max_new_tokens": 768,
+      "token_budget": 12000,
+      "max_batch": 8,
+      "attn_implementation": "sdpa",
+      "prefill_chunk_on_oom": 1024
+    },
+    "G2": {
+      "model_key": "g2",
+      "max_new_tokens": 768,
+      "token_budget": 9000,
+      "max_batch": 8,
+      "attn_implementation": "sdpa",
+      "device_map": "auto",
+      "max_memory_gib": [
+        20,
+        20
+      ],
+      "prefill_chunk_on_oom": 1024,
+      "fallback_settings": {
+        "token_budget": 9000
+      }
+    }
+  },
+  "judges": {
+    "_note": "两位评审都在服务器 GPU 上本地运行（fp32、贪心解码），不需要 API 密钥。A（GLM-4-9B-0414，与 G2 是同一模型）评全部答案并给出主指标；B（Hunyuan-7B-Instruct，关闭思考模式）只评按题号哈希固定抽取的约 25% 题目（sha256(\"B:\"+题号) 对 4 取余为 0，封存集 45 题）在所有条件下的答案，用于一致性与敏感性分析。",
+    "A": {
+      "backend": "local",
+      "name": "GLM-4-9B-0414",
+      "model_key": "judge_a",
+      "subset_mod": 1,
+      "max_new": {
+        "kpr": 512,
+        "scr_split": 1536,
+        "scr_verify": 1024
+      },
+      "token_budget": 32000,
+      "max_batch": 24,
+      "prefill_chunk": 192,
+      "attn_implementation": "sdpa",
+      "device_map": "auto",
+      "max_memory_gib": [
+        20,
+        20
+      ],
+      "chat_template_kwargs": {},
+      "fallback_settings": {
+        "token_budget": 10000,
+        "max_batch": 12,
+        "prefill_chunk": 256
+      }
+    },
+    "B": {
+      "backend": "local",
+      "name": "Hunyuan-7B-Instruct",
+      "model_key": "judge_b",
+      "subset_mod": 4,
+      "max_new": {
+        "kpr": 512,
+        "scr_split": 1536,
+        "scr_verify": 1024
+      },
+      "token_budget": 28000,
+      "max_batch": 24,
+      "prefill_chunk": 256,
+      "attn_implementation": "sdpa",
+      "device_map": "auto",
+      "max_memory_gib": [
+        16,
+        16
+      ],
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      },
+      "user_prefix": "/no_think",
+      "fallback_settings": {
+        "token_budget": 10000,
+        "max_batch": 12,
+        "prefill_chunk": 256
+      }
+    }
+  },
+  "e2": {
+    "stage4_dir": "/home/<user>/UUM/EEE_research/experiments/stage4_retraining",
+    "lr": 1e-05,
+    "epochs": 3,
+    "micro": 4,
+    "accum": 4,
+    "max_length": 512
+  },
+  "e3_chunks": 4,
+  "ext_chunks": 2
+}

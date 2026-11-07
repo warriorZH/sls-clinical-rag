@@ -1,0 +1,180 @@
+{
+  "device": "auto",
+  "models": [
+    {
+      "name": "support_ce_s42",
+      "method": "Support-CE",
+      "seed": 42,
+      "kind": "eee_ce_pt",
+      "path": "/home/<user>/UUM/EEE_research/experiments/stage4_retraining/support_42/best_checkpoint.pt",
+      "base_model": "/home/<user>/models/mdeberta-v3-base",
+      "spm": "/home/<user>/models/mdeberta-v3-base/spm.model",
+      "max_length": 512,
+      "query_max_tokens": 160,
+      "micro": 4,
+      "dtype": "fp32",
+      "enabled": true,
+      "repro": {
+        "candidates": "/home/<user>/UUM/EEE_research/experiments/stage5_real_retrieval_v1_2/candidates_unlabeled.jsonl",
+        "scores": "/home/<user>/UUM/EEE_research/experiments/stage5_real_retrieval_v1_2/parent_support_42/expanded_context_scores.npy",
+        "n": 200,
+        "tol": 0.001
+      },
+      "note": "与 E3（stage5 score_three_seed_review.py + stage4 train_stage4.predict）相同：mdeberta-v3-base + 检查点权重；[CLS]+问题前160个SP词元+[SEP]+证据(≤509−问题长度)+[SEP]；按长度排序每批4条；softmax第1类概率"
+    },
+    {
+      "name": "support_ce_s2026",
+      "method": "Support-CE",
+      "seed": 2026,
+      "kind": "eee_ce_pt",
+      "path": "/home/<user>/UUM/EEE_research/experiments/stage4_retraining/support_2026/best_checkpoint.pt",
+      "base_model": "/home/<user>/models/mdeberta-v3-base",
+      "spm": "/home/<user>/models/mdeberta-v3-base/spm.model",
+      "max_length": 512,
+      "query_max_tokens": 160,
+      "micro": 4,
+      "dtype": "fp32",
+      "enabled": true,
+      "repro": {
+        "candidates": "/home/<user>/UUM/EEE_research/experiments/stage5_real_retrieval_v1_2/candidates_unlabeled.jsonl",
+        "scores": "/home/<user>/UUM/EEE_research/experiments/stage5_real_retrieval_v1_2/parent_support_2026/expanded_context_scores.npy",
+        "n": 200,
+        "tol": 0.001
+      },
+      "note": "与 E3（stage5 score_three_seed_review.py + stage4 train_stage4.predict）相同：mdeberta-v3-base + 检查点权重；[CLS]+问题前160个SP词元+[SEP]+证据(≤509−问题长度)+[SEP]；按长度排序每批4条；softmax第1类概率"
+    },
+    {
+      "name": "support_ce_s3407",
+      "method": "Support-CE",
+      "seed": 3407,
+      "kind": "eee_ce_pt",
+      "path": "/home/<user>/UUM/EEE_research/experiments/stage4_retraining/support_3407/best_checkpoint.pt",
+      "base_model": "/home/<user>/models/mdeberta-v3-base",
+      "spm": "/home/<user>/models/mdeberta-v3-base/spm.model",
+      "max_length": 512,
+      "query_max_tokens": 160,
+      "micro": 4,
+      "dtype": "fp32",
+      "enabled": true,
+      "repro": {
+        "candidates": "/home/<user>/UUM/EEE_research/experiments/stage5_real_retrieval_v1_2/candidates_unlabeled.jsonl",
+        "scores": "/home/<user>/UUM/EEE_research/experiments/stage5_real_retrieval_v1_2/parent_support_3407/expanded_context_scores.npy",
+        "n": 200,
+        "tol": 0.001
+      },
+      "note": "与 E3（stage5 score_three_seed_review.py + stage4 train_stage4.predict）相同：mdeberta-v3-base + 检查点权重；[CLS]+问题前160个SP词元+[SEP]+证据(≤509−问题长度)+[SEP]；按长度排序每批4条；softmax第1类概率"
+    },
+    {
+      "name": "relevance_ce_s42",
+      "method": "Relevance-CE",
+      "seed": 42,
+      "kind": "eee_ce_pt",
+      "path": "/home/<user>/UUM/EEE_research/experiments/stage4_retraining/relevance_42/best_checkpoint.pt",
+      "base_model": "/home/<user>/models/mdeberta-v3-base",
+      "spm": "/home/<user>/models/mdeberta-v3-base/spm.model",
+      "max_length": 512,
+      "query_max_tokens": 160,
+      "micro": 4,
+      "dtype": "fp32",
+      "enabled": true,
+      "repro": {
+        "candidates": "/home/<user>/UUM/EEE_research/experiments/stage5_real_retrieval_v1_2/candidates_unlabeled.jsonl",
+        "scores": "/home/<user>/UUM/EEE_research/experiments/stage5_real_retrieval_v1_2/parent_relevance_42/expanded_context_scores.npy",
+        "n": 200,
+        "tol": 0.001
+      },
+      "note": "与 E3（stage5 score_three_seed_review.py + stage4 train_stage4.predict）相同：mdeberta-v3-base + 检查点权重；[CLS]+问题前160个SP词元+[SEP]+证据(≤509−问题长度)+[SEP]；按长度排序每批4条；softmax第1类概率"
+    },
+    {
+      "name": "relevance_ce_s2026",
+      "method": "Relevance-CE",
+      "seed": 2026,
+      "kind": "eee_ce_pt",
+      "path": "/home/<user>/UUM/EEE_research/experiments/stage4_retraining/relevance_2026/best_checkpoint.pt",
+      "base_model": "/home/<user>/models/mdeberta-v3-base",
+      "spm": "/home/<user>/models/mdeberta-v3-base/spm.model",
+      "max_length": 512,
+      "query_max_tokens": 160,
+      "micro": 4,
+      "dtype": "fp32",
+      "enabled": true,
+      "repro": {
+        "candidates": "/home/<user>/UUM/EEE_research/experiments/stage5_real_retrieval_v1_2/candidates_unlabeled.jsonl",
+        "scores": "/home/<user>/UUM/EEE_research/experiments/stage5_real_retrieval_v1_2/parent_relevance_2026/expanded_context_scores.npy",
+        "n": 200,
+        "tol": 0.001
+      },
+      "note": "与 E3（stage5 score_three_seed_review.py + stage4 train_stage4.predict）相同：mdeberta-v3-base + 检查点权重；[CLS]+问题前160个SP词元+[SEP]+证据(≤509−问题长度)+[SEP]；按长度排序每批4条；softmax第1类概率"
+    },
+    {
+      "name": "relevance_ce_s3407",
+      "method": "Relevance-CE",
+      "seed": 3407,
+      "kind": "eee_ce_pt",
+      "path": "/home/<user>/UUM/EEE_research/experiments/stage4_retraining/relevance_3407/best_checkpoint.pt",
+      "base_model": "/home/<user>/models/mdeberta-v3-base",
+      "spm": "/home/<user>/models/mdeberta-v3-base/spm.model",
+      "max_length": 512,
+      "query_max_tokens": 160,
+      "micro": 4,
+      "dtype": "fp32",
+      "enabled": true,
+      "repro": {
+        "candidates": "/home/<user>/UUM/EEE_research/experiments/stage5_real_retrieval_v1_2/candidates_unlabeled.jsonl",
+        "scores": "/home/<user>/UUM/EEE_research/experiments/stage5_real_retrieval_v1_2/parent_relevance_3407/expanded_context_scores.npy",
+        "n": 200,
+        "tol": 0.001
+      },
+      "note": "与 E3（stage5 score_three_seed_review.py + stage4 train_stage4.predict）相同：mdeberta-v3-base + 检查点权重；[CLS]+问题前160个SP词元+[SEP]+证据(≤509−问题长度)+[SEP]；按长度排序每批4条；softmax第1类概率"
+    },
+    {
+      "name": "bm25",
+      "method": "BM25",
+      "seed": null,
+      "kind": "bm25_rank",
+      "enabled": true
+    },
+    {
+      "name": "bge_reranker_v2_m3",
+      "method": "bge-reranker-v2-m3",
+      "seed": null,
+      "kind": "hf_seqcls",
+      "path": "/home/<user>/.cache/huggingface/hub/models--BAAI--bge-reranker-v2-m3/snapshots/953dc6f6f85a1b2dbfca4c34a2796e7dde08d41e",
+      "max_length": 1024,
+      "dtype": "fp32",
+      "positive_index": 0,
+      "pair_order": "query_first",
+      "truncation": "only_second",
+      "query_prefix": "",
+      "passage_prefix": "",
+      "batch_size": 16,
+      "enabled": true,
+      "note": "固定为 hf-mirror 上的版本 953dc6f6；Tesla P40 的 fp16 吞吐很低，改用 fp32"
+    },
+    {
+      "name": "qwen3_reranker_0_6b",
+      "method": "Qwen3-Reranker-0.6B",
+      "seed": null,
+      "kind": "qwen3_reranker",
+      "path": "/home/<user>/.cache/huggingface/hub/models--Qwen--Qwen3-Reranker-0.6B/snapshots/e61197ed45024b0ed8a2d74b80b4d909f1255473",
+      "max_length": 2048,
+      "dtype": "fp32",
+      "instruction": "Given a Traditional Chinese Medicine clinical case and a question about it, retrieve passages that help answer the question",
+      "batch_size": 8,
+      "enabled": true,
+      "note": "固定为版本 e61197ed；Tesla P40 改用 fp32"
+    },
+    {
+      "name": "llm_judge_qwen2_5_7b",
+      "method": "LLM逐点判断(Qwen2.5-7B-Instruct)",
+      "seed": null,
+      "kind": "llm_judge",
+      "path": "Qwen/Qwen2.5-7B-Instruct",
+      "max_length": 2048,
+      "dtype": "bf16",
+      "batch_size": 4,
+      "enabled": false,
+      "note": "可选方法，本次不运行：服务器为 Tesla P40（无 bf16，fp16 吞吐很低，7B 用 fp32 需两张卡），且未下载模型"
+    }
+  ]
+}

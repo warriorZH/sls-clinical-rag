@@ -1,0 +1,1651 @@
+{
+  "target": "sealed",
+  "created": "2026-10-27T23:59:23+00:00",
+  "runs": {
+    "support_ce_B_s42": {
+      "name": "support_ce_B_s42",
+      "kind": "ce_v2",
+      "spec": {
+        "name": "support_ce_B_s42",
+        "kind": "ce_v2",
+        "objective": "support",
+        "seed": 42,
+        "encoding": "B",
+        "match": null,
+        "path": "/home/<user>/UUM/EEE_research/experiments/stage4_retraining/support_42/best_checkpoint.pt",
+        "model_key": null,
+        "base_model": "/home/<user>/models/mdeberta-v3-base",
+        "spm": "/home/<user>/models/mdeberta-v3-base/spm.model",
+        "query_max_tokens": 100000,
+        "max_length": 512,
+        "micro": 4,
+        "dtype": null,
+        "instruction": null
+      },
+      "spec_sha256": "068f8e3b291a4a620f19f5c3608eb8a95bba27932800262088a2d62a08d878e1",
+      "target": "sealed",
+      "started": "2026-10-27T23:59:40+00:00",
+      "device": "cuda",
+      "env": {
+        "python": "3.10.12",
+        "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+        "host": "<gpu-host>",
+        "HF_ENDPOINT": "https://hf-mirror.com",
+        "torch": "2.7.1+cu118",
+        "cuda_available": true,
+        "visible_gpus": [
+          "Tesla P40 (22.4 GB, cc 6.1)"
+        ],
+        "transformers": "5.19.0",
+        "CUDA_VISIBLE_DEVICES": "1"
+      },
+      "script_sha256": "6ff715ea0065a047f517b6bbd10b5016d07760ec0fdfb2ecbcec25aaf4f9dcf5",
+      "optional": false,
+      "weights_sha256": {
+        "best_checkpoint.pt": "0630bb3815978f0080e5a82dc1b6fb217f66c65b6c36e7a0f497da86c831baa9"
+      },
+      "checkpoint_meta": {
+        "base_model": "/home/<user>/models/mdeberta-v3-base",
+        "checkpoint_epoch": 2,
+        "checkpoint_step": 3304,
+        "train_config": {
+          "objective": "support",
+          "seed": 42,
+          "max_length": 512,
+          "precision": "fp32",
+          "model": "/home/<user>/models/mdeberta-v3-base",
+          "gpu": "Tesla P40"
+        }
+      },
+      "check_vs_v1_A": {
+        "n": 2160,
+        "max_abs_diff": 0.0
+      },
+      "status": "ok",
+      "n_pairs": 3520,
+      "score_min": 0.0045649586245417595,
+      "score_max": 0.9986250400543213,
+      "scores_sha256": "48cc5f4dd6e471824b2d15e89261cdccdd4eb3d097f0711258314f0be0847a61",
+      "finished": "2026-10-28T00:00:51+00:00",
+      "seconds": 71.7,
+      "n_q_trunc": 0,
+      "n_e_trunc": 71
+    },
+    "support_ce_C_s42": {
+      "name": "support_ce_C_s42",
+      "kind": "ce_v2",
+      "spec": {
+        "name": "support_ce_C_s42",
+        "kind": "ce_v2",
+        "objective": "support",
+        "seed": 42,
+        "encoding": "C",
+        "match": null,
+        "path": "/home/<user>/UUM/EEE_research/experiments/stage4_retraining/support_42/best_checkpoint.pt",
+        "model_key": null,
+        "base_model": "/home/<user>/models/mdeberta-v3-base",
+        "spm": "/home/<user>/models/mdeberta-v3-base/spm.model",
+        "query_max_tokens": 100000,
+        "max_length": 1024,
+        "micro": 4,
+        "dtype": null,
+        "instruction": null
+      },
+      "spec_sha256": "3274787892c3544186aea6a461a84509f41aa35cbd691d09b340b8cd36030d86",
+      "target": "sealed",
+      "started": "2026-10-28T00:00:51+00:00",
+      "device": "cuda",
+      "env": {
+        "python": "3.10.12",
+        "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+        "host": "<gpu-host>",
+        "HF_ENDPOINT": "https://hf-mirror.com",
+        "torch": "2.7.1+cu118",
+        "cuda_available": true,
+        "visible_gpus": [
+          "Tesla P40 (22.4 GB, cc 6.1)"
+        ],
+        "transformers": "5.19.0",
+        "CUDA_VISIBLE_DEVICES": "1"
+      },
+      "script_sha256": "6ff715ea0065a047f517b6bbd10b5016d07760ec0fdfb2ecbcec25aaf4f9dcf5",
+      "optional": false,
+      "weights_sha256": {
+        "best_checkpoint.pt": "0630bb3815978f0080e5a82dc1b6fb217f66c65b6c36e7a0f497da86c831baa9"
+      },
+      "checkpoint_meta": {
+        "base_model": "/home/<user>/models/mdeberta-v3-base",
+        "checkpoint_epoch": 2,
+        "checkpoint_step": 3304,
+        "train_config": {
+          "objective": "support",
+          "seed": 42,
+          "max_length": 512,
+          "precision": "fp32",
+          "model": "/home/<user>/models/mdeberta-v3-base",
+          "gpu": "Tesla P40"
+        }
+      },
+      "check_vs_v1_A": {
+        "n": 2160,
+        "max_abs_diff": 0.0
+      },
+      "status": "ok",
+      "n_pairs": 3520,
+      "score_min": 0.0045649586245417595,
+      "score_max": 0.9986250400543213,
+      "scores_sha256": "a0873a2001b7cb2b6c2a6d03dd6c55c746617f7c58231d5c9ff73a70d0134b4b",
+      "finished": "2026-10-28T00:02:02+00:00",
+      "seconds": 70.3,
+      "n_q_trunc": 0,
+      "n_e_trunc": 0
+    },
+    "support_ce_B_s2026": {
+      "name": "support_ce_B_s2026",
+      "kind": "ce_v2",
+      "spec": {
+        "name": "support_ce_B_s2026",
+        "kind": "ce_v2",
+        "objective": "support",
+        "seed": 2026,
+        "encoding": "B",
+        "match": null,
+        "path": "/home/<user>/UUM/EEE_research/experiments/stage4_retraining/support_2026/best_checkpoint.pt",
+        "model_key": null,
+        "base_model": "/home/<user>/models/mdeberta-v3-base",
+        "spm": "/home/<user>/models/mdeberta-v3-base/spm.model",
+        "query_max_tokens": 100000,
+        "max_length": 512,
+        "micro": 4,
+        "dtype": null,
+        "instruction": null
+      },
+      "spec_sha256": "a4990794fcf887cb3e7c6d949b40e583a4b6df5131ec16fc19b735e6a7b1ce7c",
+      "target": "sealed",
+      "started": "2026-10-28T00:02:14+00:00",
+      "device": "cuda",
+      "env": {
+        "python": "3.10.12",
+        "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+        "host": "<gpu-host>",
+        "HF_ENDPOINT": "https://hf-mirror.com",
+        "torch": "2.7.1+cu118",
+        "cuda_available": true,
+        "visible_gpus": [
+          "Tesla P40 (22.4 GB, cc 6.1)"
+        ],
+        "transformers": "5.19.0",
+        "CUDA_VISIBLE_DEVICES": "1"
+      },
+      "script_sha256": "6ff715ea0065a047f517b6bbd10b5016d07760ec0fdfb2ecbcec25aaf4f9dcf5",
+      "optional": false,
+      "weights_sha256": {
+        "best_checkpoint.pt": "4725cd356726a5904eb275fff9a1cfc16d5f5e25dc36e467362886cf432f3273"
+      },
+      "checkpoint_meta": {
+        "base_model": "/home/<user>/models/mdeberta-v3-base",
+        "checkpoint_epoch": 2,
+        "checkpoint_step": 3304,
+        "train_config": {
+          "objective": "support",
+          "seed": 2026,
+          "max_length": 512,
+          "precision": "fp32",
+          "model": "/home/<user>/models/mdeberta-v3-base",
+          "gpu": "Tesla P40"
+        }
+      },
+      "check_vs_v1_A": {
+        "n": 2160,
+        "max_abs_diff": 0.0
+      },
+      "status": "ok",
+      "n_pairs": 3520,
+      "score_min": 0.004818527493625879,
+      "score_max": 0.998907208442688,
+      "scores_sha256": "a2b008bb3f3002f6fc271e845a11092b5398168d6c63d4e5517f66c5f0eda180",
+      "finished": "2026-10-28T00:03:24+00:00",
+      "seconds": 70.3,
+      "n_q_trunc": 0,
+      "n_e_trunc": 71
+    },
+    "support_ce_C_s2026": {
+      "name": "support_ce_C_s2026",
+      "kind": "ce_v2",
+      "spec": {
+        "name": "support_ce_C_s2026",
+        "kind": "ce_v2",
+        "objective": "support",
+        "seed": 2026,
+        "encoding": "C",
+        "match": null,
+        "path": "/home/<user>/UUM/EEE_research/experiments/stage4_retraining/support_2026/best_checkpoint.pt",
+        "model_key": null,
+        "base_model": "/home/<user>/models/mdeberta-v3-base",
+        "spm": "/home/<user>/models/mdeberta-v3-base/spm.model",
+        "query_max_tokens": 100000,
+        "max_length": 1024,
+        "micro": 4,
+        "dtype": null,
+        "instruction": null
+      },
+      "spec_sha256": "b3b68b73ff93f055e9c6c2601239d97beedef744e2ae2f5b8e5a7ce8cebaeaeb",
+      "target": "sealed",
+      "started": "2026-10-28T00:03:24+00:00",
+      "device": "cuda",
+      "env": {
+        "python": "3.10.12",
+        "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+        "host": "<gpu-host>",
+        "HF_ENDPOINT": "https://hf-mirror.com",
+        "torch": "2.7.1+cu118",
+        "cuda_available": true,
+        "visible_gpus": [
+          "Tesla P40 (22.4 GB, cc 6.1)"
+        ],
+        "transformers": "5.19.0",
+        "CUDA_VISIBLE_DEVICES": "1"
+      },
+      "script_sha256": "6ff715ea0065a047f517b6bbd10b5016d07760ec0fdfb2ecbcec25aaf4f9dcf5",
+      "optional": false,
+      "weights_sha256": {
+        "best_checkpoint.pt": "4725cd356726a5904eb275fff9a1cfc16d5f5e25dc36e467362886cf432f3273"
+      },
+      "checkpoint_meta": {
+        "base_model": "/home/<user>/models/mdeberta-v3-base",
+        "checkpoint_epoch": 2,
+        "checkpoint_step": 3304,
+        "train_config": {
+          "objective": "support",
+          "seed": 2026,
+          "max_length": 512,
+          "precision": "fp32",
+          "model": "/home/<user>/models/mdeberta-v3-base",
+          "gpu": "Tesla P40"
+        }
+      },
+      "check_vs_v1_A": {
+        "n": 2160,
+        "max_abs_diff": 0.0
+      },
+      "status": "ok",
+      "n_pairs": 3520,
+      "score_min": 0.004818527493625879,
+      "score_max": 0.998907208442688,
+      "scores_sha256": "384f33a3b6436cb39d574335a98346a4de11e8af8a05a45b4e8206954f84682e",
+      "finished": "2026-10-28T00:04:35+00:00",
+      "seconds": 70.3,
+      "n_q_trunc": 0,
+      "n_e_trunc": 0
+    },
+    "support_ce_B_s3407": {
+      "name": "support_ce_B_s3407",
+      "kind": "ce_v2",
+      "spec": {
+        "name": "support_ce_B_s3407",
+        "kind": "ce_v2",
+        "objective": "support",
+        "seed": 3407,
+        "encoding": "B",
+        "match": null,
+        "path": "/home/<user>/UUM/EEE_research/experiments/stage4_retraining/support_3407/best_checkpoint.pt",
+        "model_key": null,
+        "base_model": "/home/<user>/models/mdeberta-v3-base",
+        "spm": "/home/<user>/models/mdeberta-v3-base/spm.model",
+        "query_max_tokens": 100000,
+        "max_length": 512,
+        "micro": 4,
+        "dtype": null,
+        "instruction": null
+      },
+      "spec_sha256": "d9ab39cfca1a434cc324c96abb1753c73d3893965010ceb02978152e7152e77f",
+      "target": "sealed",
+      "started": "2026-10-28T00:04:47+00:00",
+      "device": "cuda",
+      "env": {
+        "python": "3.10.12",
+        "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+        "host": "<gpu-host>",
+        "HF_ENDPOINT": "https://hf-mirror.com",
+        "torch": "2.7.1+cu118",
+        "cuda_available": true,
+        "visible_gpus": [
+          "Tesla P40 (22.4 GB, cc 6.1)"
+        ],
+        "transformers": "5.19.0",
+        "CUDA_VISIBLE_DEVICES": "1"
+      },
+      "script_sha256": "6ff715ea0065a047f517b6bbd10b5016d07760ec0fdfb2ecbcec25aaf4f9dcf5",
+      "optional": false,
+      "weights_sha256": {
+        "best_checkpoint.pt": "327310130c02ffcf3f7618629dfa13eabc6d4bf5920691331aba5a5432f901f5"
+      },
+      "checkpoint_meta": {
+        "base_model": "/home/<user>/models/mdeberta-v3-base",
+        "checkpoint_epoch": 3,
+        "checkpoint_step": 4956,
+        "train_config": {
+          "objective": "support",
+          "seed": 3407,
+          "max_length": 512,
+          "precision": "fp32",
+          "model": "/home/<user>/models/mdeberta-v3-base",
+          "gpu": "Tesla P40"
+        }
+      },
+      "check_vs_v1_A": {
+        "n": 2160,
+        "max_abs_diff": 0.0
+      },
+      "status": "ok",
+      "n_pairs": 3520,
+      "score_min": 0.0028080721385776997,
+      "score_max": 0.9992132186889648,
+      "scores_sha256": "0d607e0c3f5df7857bba886ceb879e8fcc9b89f0fd4a30a98370927e87161e1f",
+      "finished": "2026-10-28T00:05:57+00:00",
+      "seconds": 70.2,
+      "n_q_trunc": 0,
+      "n_e_trunc": 71
+    },
+    "support_ce_C_s3407": {
+      "name": "support_ce_C_s3407",
+      "kind": "ce_v2",
+      "spec": {
+        "name": "support_ce_C_s3407",
+        "kind": "ce_v2",
+        "objective": "support",
+        "seed": 3407,
+        "encoding": "C",
+        "match": null,
+        "path": "/home/<user>/UUM/EEE_research/experiments/stage4_retraining/support_3407/best_checkpoint.pt",
+        "model_key": null,
+        "base_model": "/home/<user>/models/mdeberta-v3-base",
+        "spm": "/home/<user>/models/mdeberta-v3-base/spm.model",
+        "query_max_tokens": 100000,
+        "max_length": 1024,
+        "micro": 4,
+        "dtype": null,
+        "instruction": null
+      },
+      "spec_sha256": "03cefe1f34f19eb24b42815e40da621a9e0181ea6d5e3dcf422e076ad337e274",
+      "target": "sealed",
+      "started": "2026-10-28T00:05:57+00:00",
+      "device": "cuda",
+      "env": {
+        "python": "3.10.12",
+        "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+        "host": "<gpu-host>",
+        "HF_ENDPOINT": "https://hf-mirror.com",
+        "torch": "2.7.1+cu118",
+        "cuda_available": true,
+        "visible_gpus": [
+          "Tesla P40 (22.4 GB, cc 6.1)"
+        ],
+        "transformers": "5.19.0",
+        "CUDA_VISIBLE_DEVICES": "1"
+      },
+      "script_sha256": "6ff715ea0065a047f517b6bbd10b5016d07760ec0fdfb2ecbcec25aaf4f9dcf5",
+      "optional": false,
+      "weights_sha256": {
+        "best_checkpoint.pt": "327310130c02ffcf3f7618629dfa13eabc6d4bf5920691331aba5a5432f901f5"
+      },
+      "checkpoint_meta": {
+        "base_model": "/home/<user>/models/mdeberta-v3-base",
+        "checkpoint_epoch": 3,
+        "checkpoint_step": 4956,
+        "train_config": {
+          "objective": "support",
+          "seed": 3407,
+          "max_length": 512,
+          "precision": "fp32",
+          "model": "/home/<user>/models/mdeberta-v3-base",
+          "gpu": "Tesla P40"
+        }
+      },
+      "check_vs_v1_A": {
+        "n": 2160,
+        "max_abs_diff": 0.0
+      },
+      "status": "ok",
+      "n_pairs": 3520,
+      "score_min": 0.0028080721385776997,
+      "score_max": 0.9992132186889648,
+      "scores_sha256": "5a6d9a0add6f413755f544b2c8ac44be8d1a160ea0edf05879afe1e1ad8520b0",
+      "finished": "2026-10-28T00:07:08+00:00",
+      "seconds": 70.3,
+      "n_q_trunc": 0,
+      "n_e_trunc": 0
+    },
+    "relevance_ce_B_s42": {
+      "name": "relevance_ce_B_s42",
+      "kind": "ce_v2",
+      "spec": {
+        "name": "relevance_ce_B_s42",
+        "kind": "ce_v2",
+        "objective": "relevance",
+        "seed": 42,
+        "encoding": "B",
+        "match": null,
+        "path": "/home/<user>/UUM/EEE_research/experiments/stage4_retraining/relevance_42/best_checkpoint.pt",
+        "model_key": null,
+        "base_model": "/home/<user>/models/mdeberta-v3-base",
+        "spm": "/home/<user>/models/mdeberta-v3-base/spm.model",
+        "query_max_tokens": 100000,
+        "max_length": 512,
+        "micro": 4,
+        "dtype": null,
+        "instruction": null
+      },
+      "spec_sha256": "d72defd4a435e2504f05639b11ed89277cd6db7952f688202a46cb7edbb9614f",
+      "target": "sealed",
+      "started": "2026-10-28T00:07:20+00:00",
+      "device": "cuda",
+      "env": {
+        "python": "3.10.12",
+        "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+        "host": "<gpu-host>",
+        "HF_ENDPOINT": "https://hf-mirror.com",
+        "torch": "2.7.1+cu118",
+        "cuda_available": true,
+        "visible_gpus": [
+          "Tesla P40 (22.4 GB, cc 6.1)"
+        ],
+        "transformers": "5.19.0",
+        "CUDA_VISIBLE_DEVICES": "1"
+      },
+      "script_sha256": "6ff715ea0065a047f517b6bbd10b5016d07760ec0fdfb2ecbcec25aaf4f9dcf5",
+      "optional": false,
+      "weights_sha256": {
+        "best_checkpoint.pt": "ee3f8c92845b7cb95adec925dacf877f417398c6754f375c531bd6311a113069"
+      },
+      "checkpoint_meta": {
+        "base_model": "/home/<user>/models/mdeberta-v3-base",
+        "checkpoint_epoch": 3,
+        "checkpoint_step": 4956,
+        "train_config": {
+          "objective": "relevance",
+          "seed": 42,
+          "max_length": 512,
+          "precision": "fp32",
+          "model": "/home/<user>/models/mdeberta-v3-base",
+          "gpu": "Tesla P40"
+        }
+      },
+      "check_vs_v1_A": {
+        "n": 2160,
+        "max_abs_diff": 0.0
+      },
+      "status": "ok",
+      "n_pairs": 3520,
+      "score_min": 0.011722776107490063,
+      "score_max": 0.9998922348022461,
+      "scores_sha256": "1a846d2d15af046c9f54d4c17a01575076ffa388fc21dc301165fa45c25a54e2",
+      "finished": "2026-10-28T00:08:30+00:00",
+      "seconds": 70.3,
+      "n_q_trunc": 0,
+      "n_e_trunc": 71
+    },
+    "relevance_ce_C_s42": {
+      "name": "relevance_ce_C_s42",
+      "kind": "ce_v2",
+      "spec": {
+        "name": "relevance_ce_C_s42",
+        "kind": "ce_v2",
+        "objective": "relevance",
+        "seed": 42,
+        "encoding": "C",
+        "match": null,
+        "path": "/home/<user>/UUM/EEE_research/experiments/stage4_retraining/relevance_42/best_checkpoint.pt",
+        "model_key": null,
+        "base_model": "/home/<user>/models/mdeberta-v3-base",
+        "spm": "/home/<user>/models/mdeberta-v3-base/spm.model",
+        "query_max_tokens": 100000,
+        "max_length": 1024,
+        "micro": 4,
+        "dtype": null,
+        "instruction": null
+      },
+      "spec_sha256": "e079bbcbceca5d7af25919b405d20c89b7896203c56a5ebff08e3ed441c027d5",
+      "target": "sealed",
+      "started": "2026-10-28T00:08:30+00:00",
+      "device": "cuda",
+      "env": {
+        "python": "3.10.12",
+        "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+        "host": "<gpu-host>",
+        "HF_ENDPOINT": "https://hf-mirror.com",
+        "torch": "2.7.1+cu118",
+        "cuda_available": true,
+        "visible_gpus": [
+          "Tesla P40 (22.4 GB, cc 6.1)"
+        ],
+        "transformers": "5.19.0",
+        "CUDA_VISIBLE_DEVICES": "1"
+      },
+      "script_sha256": "6ff715ea0065a047f517b6bbd10b5016d07760ec0fdfb2ecbcec25aaf4f9dcf5",
+      "optional": false,
+      "weights_sha256": {
+        "best_checkpoint.pt": "ee3f8c92845b7cb95adec925dacf877f417398c6754f375c531bd6311a113069"
+      },
+      "checkpoint_meta": {
+        "base_model": "/home/<user>/models/mdeberta-v3-base",
+        "checkpoint_epoch": 3,
+        "checkpoint_step": 4956,
+        "train_config": {
+          "objective": "relevance",
+          "seed": 42,
+          "max_length": 512,
+          "precision": "fp32",
+          "model": "/home/<user>/models/mdeberta-v3-base",
+          "gpu": "Tesla P40"
+        }
+      },
+      "check_vs_v1_A": {
+        "n": 2160,
+        "max_abs_diff": 0.0
+      },
+      "status": "ok",
+      "n_pairs": 3520,
+      "score_min": 0.011722776107490063,
+      "score_max": 0.9998922348022461,
+      "scores_sha256": "ca6bdf966433c72006c287b674490c91ce0c5ba1549827df971c666a51d3cf88",
+      "finished": "2026-10-28T00:09:41+00:00",
+      "seconds": 70.4,
+      "n_q_trunc": 0,
+      "n_e_trunc": 0
+    },
+    "relevance_ce_B_s2026": {
+      "name": "relevance_ce_B_s2026",
+      "kind": "ce_v2",
+      "spec": {
+        "name": "relevance_ce_B_s2026",
+        "kind": "ce_v2",
+        "objective": "relevance",
+        "seed": 2026,
+        "encoding": "B",
+        "match": null,
+        "path": "/home/<user>/UUM/EEE_research/experiments/stage4_retraining/relevance_2026/best_checkpoint.pt",
+        "model_key": null,
+        "base_model": "/home/<user>/models/mdeberta-v3-base",
+        "spm": "/home/<user>/models/mdeberta-v3-base/spm.model",
+        "query_max_tokens": 100000,
+        "max_length": 512,
+        "micro": 4,
+        "dtype": null,
+        "instruction": null
+      },
+      "spec_sha256": "821bfa5f9e0ad2feeec5f13efadcb5e0f8e42a5cafbcd50105a17e5cf651e5ff",
+      "target": "sealed",
+      "started": "2026-10-28T00:09:53+00:00",
+      "device": "cuda",
+      "env": {
+        "python": "3.10.12",
+        "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+        "host": "<gpu-host>",
+        "HF_ENDPOINT": "https://hf-mirror.com",
+        "torch": "2.7.1+cu118",
+        "cuda_available": true,
+        "visible_gpus": [
+          "Tesla P40 (22.4 GB, cc 6.1)"
+        ],
+        "transformers": "5.19.0",
+        "CUDA_VISIBLE_DEVICES": "1"
+      },
+      "script_sha256": "6ff715ea0065a047f517b6bbd10b5016d07760ec0fdfb2ecbcec25aaf4f9dcf5",
+      "optional": false,
+      "weights_sha256": {
+        "best_checkpoint.pt": "24377345e25b5bb0620183d96d49f0c8521a4b1056aba77b77fa49905751f0a5"
+      },
+      "checkpoint_meta": {
+        "base_model": "/home/<user>/models/mdeberta-v3-base",
+        "checkpoint_epoch": 1,
+        "checkpoint_step": 1652,
+        "train_config": {
+          "objective": "relevance",
+          "seed": 2026,
+          "max_length": 512,
+          "precision": "fp32",
+          "model": "/home/<user>/models/mdeberta-v3-base",
+          "gpu": "Tesla P40"
+        }
+      },
+      "check_vs_v1_A": {
+        "n": 2160,
+        "max_abs_diff": 0.0
+      },
+      "status": "ok",
+      "n_pairs": 3520,
+      "score_min": 0.07888897508382797,
+      "score_max": 0.999488353729248,
+      "scores_sha256": "6b5979e6c091670aba4f1fd933e86098993117a61ae9e88379b0f22f5022045d",
+      "finished": "2026-10-28T00:11:03+00:00",
+      "seconds": 70.2,
+      "n_q_trunc": 0,
+      "n_e_trunc": 71
+    },
+    "relevance_ce_C_s2026": {
+      "name": "relevance_ce_C_s2026",
+      "kind": "ce_v2",
+      "spec": {
+        "name": "relevance_ce_C_s2026",
+        "kind": "ce_v2",
+        "objective": "relevance",
+        "seed": 2026,
+        "encoding": "C",
+        "match": null,
+        "path": "/home/<user>/UUM/EEE_research/experiments/stage4_retraining/relevance_2026/best_checkpoint.pt",
+        "model_key": null,
+        "base_model": "/home/<user>/models/mdeberta-v3-base",
+        "spm": "/home/<user>/models/mdeberta-v3-base/spm.model",
+        "query_max_tokens": 100000,
+        "max_length": 1024,
+        "micro": 4,
+        "dtype": null,
+        "instruction": null
+      },
+      "spec_sha256": "2fc3319f8d5a2567a707def223b1670bd1a986cc8bfbca918857a1a20a79295e",
+      "target": "sealed",
+      "started": "2026-10-28T00:11:03+00:00",
+      "device": "cuda",
+      "env": {
+        "python": "3.10.12",
+        "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+        "host": "<gpu-host>",
+        "HF_ENDPOINT": "https://hf-mirror.com",
+        "torch": "2.7.1+cu118",
+        "cuda_available": true,
+        "visible_gpus": [
+          "Tesla P40 (22.4 GB, cc 6.1)"
+        ],
+        "transformers": "5.19.0",
+        "CUDA_VISIBLE_DEVICES": "1"
+      },
+      "script_sha256": "6ff715ea0065a047f517b6bbd10b5016d07760ec0fdfb2ecbcec25aaf4f9dcf5",
+      "optional": false,
+      "weights_sha256": {
+        "best_checkpoint.pt": "24377345e25b5bb0620183d96d49f0c8521a4b1056aba77b77fa49905751f0a5"
+      },
+      "checkpoint_meta": {
+        "base_model": "/home/<user>/models/mdeberta-v3-base",
+        "checkpoint_epoch": 1,
+        "checkpoint_step": 1652,
+        "train_config": {
+          "objective": "relevance",
+          "seed": 2026,
+          "max_length": 512,
+          "precision": "fp32",
+          "model": "/home/<user>/models/mdeberta-v3-base",
+          "gpu": "Tesla P40"
+        }
+      },
+      "check_vs_v1_A": {
+        "n": 2160,
+        "max_abs_diff": 0.0
+      },
+      "status": "ok",
+      "n_pairs": 3520,
+      "score_min": 0.07888897508382797,
+      "score_max": 0.999488353729248,
+      "scores_sha256": "6d8857112b9793d14b8662e62e3c0af5303c5a794534e187ce1317663cc53e1c",
+      "finished": "2026-10-28T00:12:13+00:00",
+      "seconds": 70.3,
+      "n_q_trunc": 0,
+      "n_e_trunc": 0
+    },
+    "relevance_ce_B_s3407": {
+      "name": "relevance_ce_B_s3407",
+      "kind": "ce_v2",
+      "spec": {
+        "name": "relevance_ce_B_s3407",
+        "kind": "ce_v2",
+        "objective": "relevance",
+        "seed": 3407,
+        "encoding": "B",
+        "match": null,
+        "path": "/home/<user>/UUM/EEE_research/experiments/stage4_retraining/relevance_3407/best_checkpoint.pt",
+        "model_key": null,
+        "base_model": "/home/<user>/models/mdeberta-v3-base",
+        "spm": "/home/<user>/models/mdeberta-v3-base/spm.model",
+        "query_max_tokens": 100000,
+        "max_length": 512,
+        "micro": 4,
+        "dtype": null,
+        "instruction": null
+      },
+      "spec_sha256": "6c7f034f58af9ba28ac1fac889027ac44f5c911486696ccf6b3443ddaf194afe",
+      "target": "sealed",
+      "started": "2026-10-28T00:12:26+00:00",
+      "device": "cuda",
+      "env": {
+        "python": "3.10.12",
+        "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+        "host": "<gpu-host>",
+        "HF_ENDPOINT": "https://hf-mirror.com",
+        "torch": "2.7.1+cu118",
+        "cuda_available": true,
+        "visible_gpus": [
+          "Tesla P40 (22.4 GB, cc 6.1)"
+        ],
+        "transformers": "5.19.0",
+        "CUDA_VISIBLE_DEVICES": "1"
+      },
+      "script_sha256": "6ff715ea0065a047f517b6bbd10b5016d07760ec0fdfb2ecbcec25aaf4f9dcf5",
+      "optional": false,
+      "weights_sha256": {
+        "best_checkpoint.pt": "f7e164ae719999c7e2105ab790a492df8832dba8ce6a79bb12bcfa4b4f53241f"
+      },
+      "checkpoint_meta": {
+        "base_model": "/home/<user>/models/mdeberta-v3-base",
+        "checkpoint_epoch": 1,
+        "checkpoint_step": 1652,
+        "train_config": {
+          "objective": "relevance",
+          "seed": 3407,
+          "max_length": 512,
+          "precision": "fp32",
+          "model": "/home/<user>/models/mdeberta-v3-base",
+          "gpu": "Tesla P40"
+        }
+      },
+      "check_vs_v1_A": {
+        "n": 2160,
+        "max_abs_diff": 0.0
+      },
+      "status": "ok",
+      "n_pairs": 3520,
+      "score_min": 0.054873377084732056,
+      "score_max": 0.9991167187690735,
+      "scores_sha256": "e8d71bba1cdfb970d7555bd79631caa9d18273abb6f58145661206c494649056",
+      "finished": "2026-10-28T00:13:36+00:00",
+      "seconds": 70.3,
+      "n_q_trunc": 0,
+      "n_e_trunc": 71
+    },
+    "relevance_ce_C_s3407": {
+      "name": "relevance_ce_C_s3407",
+      "kind": "ce_v2",
+      "spec": {
+        "name": "relevance_ce_C_s3407",
+        "kind": "ce_v2",
+        "objective": "relevance",
+        "seed": 3407,
+        "encoding": "C",
+        "match": null,
+        "path": "/home/<user>/UUM/EEE_research/experiments/stage4_retraining/relevance_3407/best_checkpoint.pt",
+        "model_key": null,
+        "base_model": "/home/<user>/models/mdeberta-v3-base",
+        "spm": "/home/<user>/models/mdeberta-v3-base/spm.model",
+        "query_max_tokens": 100000,
+        "max_length": 1024,
+        "micro": 4,
+        "dtype": null,
+        "instruction": null
+      },
+      "spec_sha256": "15c1e40097e0bcb3d25438050b255d0e7142286925fca02ed26659a5f7c4d1c3",
+      "target": "sealed",
+      "started": "2026-10-28T00:13:36+00:00",
+      "device": "cuda",
+      "env": {
+        "python": "3.10.12",
+        "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+        "host": "<gpu-host>",
+        "HF_ENDPOINT": "https://hf-mirror.com",
+        "torch": "2.7.1+cu118",
+        "cuda_available": true,
+        "visible_gpus": [
+          "Tesla P40 (22.4 GB, cc 6.1)"
+        ],
+        "transformers": "5.19.0",
+        "CUDA_VISIBLE_DEVICES": "1"
+      },
+      "script_sha256": "6ff715ea0065a047f517b6bbd10b5016d07760ec0fdfb2ecbcec25aaf4f9dcf5",
+      "optional": false,
+      "weights_sha256": {
+        "best_checkpoint.pt": "f7e164ae719999c7e2105ab790a492df8832dba8ce6a79bb12bcfa4b4f53241f"
+      },
+      "checkpoint_meta": {
+        "base_model": "/home/<user>/models/mdeberta-v3-base",
+        "checkpoint_epoch": 1,
+        "checkpoint_step": 1652,
+        "train_config": {
+          "objective": "relevance",
+          "seed": 3407,
+          "max_length": 512,
+          "precision": "fp32",
+          "model": "/home/<user>/models/mdeberta-v3-base",
+          "gpu": "Tesla P40"
+        }
+      },
+      "check_vs_v1_A": {
+        "n": 2160,
+        "max_abs_diff": 0.0
+      },
+      "status": "ok",
+      "n_pairs": 3520,
+      "score_min": 0.054873377084732056,
+      "score_max": 0.9991167187690735,
+      "scores_sha256": "bc8fc40e3259bf661bd33b639e9140d52838eba4ea6deaf0e792e618760f5a3c",
+      "finished": "2026-10-28T00:14:46+00:00",
+      "seconds": 70.5,
+      "n_q_trunc": 0,
+      "n_e_trunc": 0
+    },
+    "bge_A": {
+      "name": "bge_A",
+      "kind": "hf_seqcls",
+      "spec": {
+        "name": "bge_A",
+        "kind": "hf_seqcls",
+        "objective": null,
+        "seed": null,
+        "encoding": null,
+        "match": "A",
+        "path": "/home/<user>/.cache/huggingface/hub/models--BAAI--bge-reranker-v2-m3/snapshots/953dc6f6f85a1b2dbfca4c34a2796e7dde08d41e",
+        "model_key": null,
+        "base_model": null,
+        "spm": null,
+        "query_max_tokens": null,
+        "max_length": 1024,
+        "micro": null,
+        "dtype": "fp32",
+        "instruction": null
+      },
+      "spec_sha256": "7ef8b6f2dd37886e54491cf52b7e966c28d583aa20fef2f40948e821942b611e",
+      "target": "sealed",
+      "started": "2026-10-28T09:28:37+00:00",
+      "device": "cuda",
+      "env": {
+        "python": "3.10.12",
+        "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+        "host": "<gpu-host>",
+        "HF_ENDPOINT": "https://hf-mirror.com",
+        "torch": "2.7.1+cu118",
+        "cuda_available": true,
+        "visible_gpus": [
+          "Tesla P40 (22.4 GB, cc 6.1)"
+        ],
+        "transformers": "5.19.0",
+        "CUDA_VISIBLE_DEVICES": "1"
+      },
+      "script_sha256": "6ff715ea0065a047f517b6bbd10b5016d07760ec0fdfb2ecbcec25aaf4f9dcf5",
+      "optional": false,
+      "resolved_path": "/home/<user>/.cache/huggingface/hub/models--BAAI--bge-reranker-v2-m3/snapshots/953dc6f6f85a1b2dbfca4c34a2796e7dde08d41e",
+      "weights_sha256": {
+        "model.safetensors": "d9e3e081faff1eefb84019509b2f5558fd74c1a05a2c7db22f74174fcedb5286"
+      },
+      "info": {
+        "num_labels": 1,
+        "id2label": {
+          "0": "LABEL_0"
+        },
+        "positive_index": null,
+        "score": "logit",
+        "max_length": 1024,
+        "truncation": "only_second",
+        "pair_order": "query_first",
+        "n_truncated": 0,
+        "longest_first_fallback": 0,
+        "tokenizer_class": "XLMRobertaTokenizer",
+        "dtype_used": "fp32"
+      },
+      "check_vs_v1_N": {
+        "n": 2160,
+        "max_abs_diff": 0.0
+      },
+      "status": "ok",
+      "n_pairs": 3520,
+      "score_min": -10.906270980834961,
+      "score_max": 5.098995685577393,
+      "scores_sha256": "e5724a525acd7b8c6979d5b12b36dc34f52a181b2da0412d09d32e21c9c436a3",
+      "finished": "2026-10-28T09:32:31+00:00",
+      "seconds": 234.0,
+      "n_q_trunc": 1360,
+      "n_e_trunc": 0
+    },
+    "qr06_A": {
+      "name": "qr06_A",
+      "kind": "qwen3_reranker",
+      "spec": {
+        "name": "qr06_A",
+        "kind": "qwen3_reranker",
+        "objective": null,
+        "seed": null,
+        "encoding": null,
+        "match": "A",
+        "path": "/home/<user>/.cache/huggingface/hub/models--Qwen--Qwen3-Reranker-0.6B/snapshots/e61197ed45024b0ed8a2d74b80b4d909f1255473",
+        "model_key": null,
+        "base_model": null,
+        "spm": null,
+        "query_max_tokens": null,
+        "max_length": 2048,
+        "micro": null,
+        "dtype": "fp32",
+        "instruction": "Given a Traditional Chinese Medicine clinical case and a question about it, retrieve passages that help answer the question"
+      },
+      "spec_sha256": "aa2aa86e6e60e887c10fd950fd1f1eb8cb5e9280f0d2af1cf26d196eb4f018b5",
+      "target": "sealed",
+      "started": "2026-10-28T09:32:31+00:00",
+      "device": "cuda",
+      "env": {
+        "python": "3.10.12",
+        "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+        "host": "<gpu-host>",
+        "HF_ENDPOINT": "https://hf-mirror.com",
+        "torch": "2.7.1+cu118",
+        "cuda_available": true,
+        "visible_gpus": [
+          "Tesla P40 (22.4 GB, cc 6.1)"
+        ],
+        "transformers": "5.19.0",
+        "CUDA_VISIBLE_DEVICES": "1"
+      },
+      "script_sha256": "6ff715ea0065a047f517b6bbd10b5016d07760ec0fdfb2ecbcec25aaf4f9dcf5",
+      "optional": false,
+      "resolved_path": "/home/<user>/.cache/huggingface/hub/models--Qwen--Qwen3-Reranker-0.6B/snapshots/e61197ed45024b0ed8a2d74b80b4d909f1255473",
+      "weights_sha256": {
+        "model.safetensors": "27cd75a405b9c1b46b59abfd88aaa209e6fed2a1972cde9b70e7659537c5e65b"
+      },
+      "info": {
+        "score": "log P(yes)",
+        "instruction": "Given a Traditional Chinese Medicine clinical case and a question about it, retrieve passages that help answer the question",
+        "max_length": 2048,
+        "n_truncated": 0,
+        "yes_id": 9693,
+        "no_id": 2152,
+        "dtype_used": "fp32"
+      },
+      "check_vs_v1_N": {
+        "n": 2160,
+        "max_abs_diff": 4.7206878662109375e-05
+      },
+      "status": "ok",
+      "n_pairs": 3520,
+      "score_min": -11.287954330444336,
+      "score_max": -0.0003634030872490257,
+      "scores_sha256": "6ef0962e082060e6633823459efa9d92eca4f00e355d45e01ef749d7eb1cf0e5",
+      "finished": "2026-10-28T09:38:30+00:00",
+      "seconds": 358.2,
+      "n_q_trunc": 1360,
+      "n_e_trunc": 0
+    },
+    "bge_B": {
+      "name": "bge_B",
+      "kind": "hf_seqcls",
+      "spec": {
+        "name": "bge_B",
+        "kind": "hf_seqcls",
+        "objective": null,
+        "seed": null,
+        "encoding": null,
+        "match": "B",
+        "path": "/home/<user>/.cache/huggingface/hub/models--BAAI--bge-reranker-v2-m3/snapshots/953dc6f6f85a1b2dbfca4c34a2796e7dde08d41e",
+        "model_key": null,
+        "base_model": null,
+        "spm": null,
+        "query_max_tokens": null,
+        "max_length": 1024,
+        "micro": null,
+        "dtype": "fp32",
+        "instruction": null
+      },
+      "spec_sha256": "80a132c5aaf3029472f64eea5bf2f357b99889c11d63da606d61265763cb1a94",
+      "target": "sealed",
+      "started": "2026-10-28T09:38:30+00:00",
+      "device": "cuda",
+      "env": {
+        "python": "3.10.12",
+        "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+        "host": "<gpu-host>",
+        "HF_ENDPOINT": "https://hf-mirror.com",
+        "torch": "2.7.1+cu118",
+        "cuda_available": true,
+        "visible_gpus": [
+          "Tesla P40 (22.4 GB, cc 6.1)"
+        ],
+        "transformers": "5.19.0",
+        "CUDA_VISIBLE_DEVICES": "1"
+      },
+      "script_sha256": "6ff715ea0065a047f517b6bbd10b5016d07760ec0fdfb2ecbcec25aaf4f9dcf5",
+      "optional": false,
+      "resolved_path": "/home/<user>/.cache/huggingface/hub/models--BAAI--bge-reranker-v2-m3/snapshots/953dc6f6f85a1b2dbfca4c34a2796e7dde08d41e",
+      "weights_sha256": {
+        "model.safetensors": "d9e3e081faff1eefb84019509b2f5558fd74c1a05a2c7db22f74174fcedb5286"
+      },
+      "info": {
+        "num_labels": 1,
+        "id2label": {
+          "0": "LABEL_0"
+        },
+        "positive_index": null,
+        "score": "logit",
+        "max_length": 1024,
+        "truncation": "only_second",
+        "pair_order": "query_first",
+        "n_truncated": 0,
+        "longest_first_fallback": 0,
+        "tokenizer_class": "XLMRobertaTokenizer",
+        "dtype_used": "fp32"
+      },
+      "check_vs_v1_N": {
+        "n": 3449,
+        "max_abs_diff": 0.0
+      },
+      "status": "ok",
+      "n_pairs": 3520,
+      "score_min": -11.002838134765625,
+      "score_max": 5.098995685577393,
+      "scores_sha256": "4865e372b4ff36597e2dce3fccba5ccac813c4d170b9cbc01a5a6f2c654e7a3b",
+      "finished": "2026-10-28T09:42:26+00:00",
+      "seconds": 235.6,
+      "n_q_trunc": 0,
+      "n_e_trunc": 71
+    },
+    "qr06_B": {
+      "name": "qr06_B",
+      "kind": "qwen3_reranker",
+      "spec": {
+        "name": "qr06_B",
+        "kind": "qwen3_reranker",
+        "objective": null,
+        "seed": null,
+        "encoding": null,
+        "match": "B",
+        "path": "/home/<user>/.cache/huggingface/hub/models--Qwen--Qwen3-Reranker-0.6B/snapshots/e61197ed45024b0ed8a2d74b80b4d909f1255473",
+        "model_key": null,
+        "base_model": null,
+        "spm": null,
+        "query_max_tokens": null,
+        "max_length": 2048,
+        "micro": null,
+        "dtype": "fp32",
+        "instruction": "Given a Traditional Chinese Medicine clinical case and a question about it, retrieve passages that help answer the question"
+      },
+      "spec_sha256": "8516ae3807f2df6bb664195e3850d44c5a5842cf7829f03d148346a3229ef648",
+      "target": "sealed",
+      "started": "2026-10-28T09:42:26+00:00",
+      "device": "cuda",
+      "env": {
+        "python": "3.10.12",
+        "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+        "host": "<gpu-host>",
+        "HF_ENDPOINT": "https://hf-mirror.com",
+        "torch": "2.7.1+cu118",
+        "cuda_available": true,
+        "visible_gpus": [
+          "Tesla P40 (22.4 GB, cc 6.1)"
+        ],
+        "transformers": "5.19.0",
+        "CUDA_VISIBLE_DEVICES": "1"
+      },
+      "script_sha256": "6ff715ea0065a047f517b6bbd10b5016d07760ec0fdfb2ecbcec25aaf4f9dcf5",
+      "optional": false,
+      "resolved_path": "/home/<user>/.cache/huggingface/hub/models--Qwen--Qwen3-Reranker-0.6B/snapshots/e61197ed45024b0ed8a2d74b80b4d909f1255473",
+      "weights_sha256": {
+        "model.safetensors": "27cd75a405b9c1b46b59abfd88aaa209e6fed2a1972cde9b70e7659537c5e65b"
+      },
+      "info": {
+        "score": "log P(yes)",
+        "instruction": "Given a Traditional Chinese Medicine clinical case and a question about it, retrieve passages that help answer the question",
+        "max_length": 2048,
+        "n_truncated": 0,
+        "yes_id": 9693,
+        "no_id": 2152,
+        "dtype_used": "fp32"
+      },
+      "check_vs_v1_N": {
+        "n": 3449,
+        "max_abs_diff": 0.00015211105346679688
+      },
+      "status": "ok",
+      "n_pairs": 3520,
+      "score_min": -11.287954330444336,
+      "score_max": -0.0003634030872490257,
+      "scores_sha256": "33a233037960d85dcdd5d4867d43c01e5a54c7eeb86159cf9c59d221d7b2f992",
+      "finished": "2026-10-28T09:48:29+00:00",
+      "seconds": 362.7,
+      "n_q_trunc": 0,
+      "n_e_trunc": 71
+    },
+    "qr4b_N": {
+      "name": "qr4b_N",
+      "kind": "qwen3_reranker",
+      "spec": {
+        "name": "qr4b_N",
+        "kind": "qwen3_reranker",
+        "objective": null,
+        "seed": null,
+        "encoding": null,
+        "match": null,
+        "path": null,
+        "model_key": "qr4b",
+        "base_model": null,
+        "spm": null,
+        "query_max_tokens": null,
+        "max_length": 2048,
+        "micro": null,
+        "dtype": "fp32",
+        "instruction": "Given a Traditional Chinese Medicine clinical case and a question about it, retrieve passages that help answer the question"
+      },
+      "spec_sha256": "d38353cabe7703681a0e2df8e156a10fec483b14bb7a71b0a045f27b76308584",
+      "target": "sealed",
+      "started": "2026-10-28T09:48:29+00:00",
+      "device": "cuda",
+      "env": {
+        "python": "3.10.12",
+        "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+        "host": "<gpu-host>",
+        "HF_ENDPOINT": "https://hf-mirror.com",
+        "torch": "2.7.1+cu118",
+        "cuda_available": true,
+        "visible_gpus": [
+          "Tesla P40 (22.4 GB, cc 6.1)"
+        ],
+        "transformers": "5.19.0",
+        "CUDA_VISIBLE_DEVICES": "1"
+      },
+      "script_sha256": "6ff715ea0065a047f517b6bbd10b5016d07760ec0fdfb2ecbcec25aaf4f9dcf5",
+      "optional": true,
+      "resolved_path": "/home/<user>/.cache/huggingface/hub/models--Qwen--Qwen3-Reranker-4B/snapshots/22e683669bc0f0bd69640a1354a6d0aebcfeede5",
+      "weights_sha256": {
+        "model-00001-of-00002.safetensors": "cf2e87cbf71fa628961532232e04dd6c19702a0a057f5e2aff95ea1aca4fd488",
+        "model-00002-of-00002.safetensors": "78946d22b7f6456ea7a5358dbdf3982de36c5bac1f166a5fd58e18e31db8048a"
+      },
+      "info": {
+        "score": "log P(yes)",
+        "instruction": "Given a Traditional Chinese Medicine clinical case and a question about it, retrieve passages that help answer the question",
+        "max_length": 2048,
+        "n_truncated": 0,
+        "yes_id": 9693,
+        "no_id": 2152,
+        "dtype_used": "fp32"
+      },
+      "status": "ok",
+      "n_pairs": 3520,
+      "score_min": -11.518178939819336,
+      "score_max": -0.0004586121649481356,
+      "scores_sha256": "c185f0cc9b495500d89f7260d7d54e433bb747fe77f9479e047d31b339433a8a",
+      "finished": "2026-10-28T10:18:01+00:00",
+      "seconds": 1771.6,
+      "n_q_trunc": null,
+      "n_e_trunc": null
+    },
+    "llmsel_N": {
+      "name": "llmsel_N",
+      "kind": "llm_judge",
+      "spec": {
+        "name": "llmsel_N",
+        "kind": "llm_judge",
+        "objective": null,
+        "seed": null,
+        "encoding": null,
+        "match": null,
+        "path": null,
+        "model_key": "g1",
+        "base_model": null,
+        "spm": null,
+        "query_max_tokens": null,
+        "max_length": 2048,
+        "micro": null,
+        "dtype": "fp32",
+        "instruction": null
+      },
+      "spec_sha256": "1e535ce4f6c6ccee85d8261406b730c656bf81a0abc837f05618466df78e5da0",
+      "target": "sealed",
+      "started": "2026-10-28T10:18:01+00:00",
+      "device": "cuda",
+      "env": {
+        "python": "3.10.12",
+        "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+        "host": "<gpu-host>",
+        "HF_ENDPOINT": "https://hf-mirror.com",
+        "torch": "2.7.1+cu118",
+        "cuda_available": true,
+        "visible_gpus": [
+          "Tesla P40 (22.4 GB, cc 6.1)"
+        ],
+        "transformers": "5.19.0",
+        "CUDA_VISIBLE_DEVICES": "1"
+      },
+      "script_sha256": "6ff715ea0065a047f517b6bbd10b5016d07760ec0fdfb2ecbcec25aaf4f9dcf5",
+      "optional": true,
+      "resolved_path": "/home/<user>/.cache/huggingface/hub/models--Qwen--Qwen3-4B-Instruct-2507/snapshots/cdbee75f17c01a7cc42f958dc650907174af0554",
+      "weights_sha256": {
+        "model-00001-of-00003.safetensors": "75311d91bb08cf0b882913da464a1e722a31fb44db35208663487efb7a3d8ed6",
+        "model-00002-of-00003.safetensors": "0b48adbb1f60e901153d91907ba11ce63bd4b8b584482e730f48808d055dfba1",
+        "model-00003-of-00003.safetensors": "7dd39ccca5e4de123c74c14af44c9bf2eb75df33b4614382af0134528e060d5d"
+      },
+      "info": {
+        "score": "log P(是)/(P(是)+P(否))",
+        "max_length": 2048,
+        "n_truncated": 0,
+        "prompt_sha256": "724277ef68575f8c500e56879edbeaa8765b8b5f25e88ae5465eaddaad481ed3",
+        "yes_id": 20412,
+        "no_id": 32376,
+        "dtype_used": "fp32"
+      },
+      "status": "ok",
+      "n_pairs": 3520,
+      "score_min": -26.263996124267578,
+      "score_max": 0.0,
+      "scores_sha256": "6a4159bbd0a806e950766051976800f01fad9f1088d11fa93ff3e799a5fea750",
+      "finished": "2026-10-28T10:48:25+00:00",
+      "seconds": 1823.3,
+      "n_q_trunc": null,
+      "n_e_trunc": null
+    },
+    "bge_support_ft_s42": {
+      "name": "bge_support_ft_s42",
+      "kind": "hf_seqcls",
+      "spec": {
+        "name": "bge_support_ft_s42",
+        "kind": "hf_seqcls",
+        "objective": "support",
+        "seed": 42,
+        "encoding": null,
+        "match": null,
+        "path": "eval_v2/runs/e2/support_s42/model",
+        "model_key": null,
+        "base_model": null,
+        "spm": null,
+        "query_max_tokens": null,
+        "max_length": 1024,
+        "micro": null,
+        "dtype": "fp32",
+        "instruction": null
+      },
+      "spec_sha256": "b312cd630940f58af6ade742aa91d77c73716d3ad1d60afc99179de12e43ca7f",
+      "target": "sealed",
+      "started": "2026-11-02T16:52:09+00:00",
+      "device": "cuda",
+      "env": {
+        "python": "3.10.12",
+        "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+        "host": "<gpu-host>",
+        "HF_ENDPOINT": "https://hf-mirror.com",
+        "torch": "2.7.1+cu118",
+        "cuda_available": true,
+        "visible_gpus": [
+          "Tesla P40 (23.9 GB, cc 6.1)"
+        ],
+        "transformers": "5.19.0",
+        "CUDA_VISIBLE_DEVICES": "0"
+      },
+      "script_sha256": "130c9faa94a82337deedb836b705df0f30e4f7d2127d92f636091211f762f807",
+      "optional": false,
+      "resolved_path": "/home/<user>/UUM/EEE_research/expert_testset_v1/eval_v2/runs/e2/support_s42/model",
+      "weights_sha256": {
+        "model.safetensors": "d5f7881f28e8da10e91c79b0c0d8f6b72894789d59a54ceb2fc8480fa7f73ee4"
+      },
+      "batch_size_used": 16,
+      "info": {
+        "num_labels": 1,
+        "id2label": {
+          "0": "LABEL_0"
+        },
+        "positive_index": null,
+        "score": "logit",
+        "max_length": 1024,
+        "truncation": "only_second",
+        "pair_order": "query_first",
+        "n_truncated": 0,
+        "longest_first_fallback": 0,
+        "tokenizer_class": "XLMRobertaTokenizer",
+        "dtype_used": "fp32"
+      },
+      "status": "ok",
+      "n_pairs": 3520,
+      "score_min": -7.843600749969482,
+      "score_max": 10.096996307373047,
+      "scores_sha256": "899c0cd688f3a6f7b108ecb3429bd4a50a44a8152cdf3dc005785a171c248028",
+      "finished": "2026-11-02T16:55:30+00:00",
+      "seconds": 201.9,
+      "n_q_trunc": null,
+      "n_e_trunc": null
+    },
+    "bge_support_ft_s2026": {
+      "name": "bge_support_ft_s2026",
+      "kind": "hf_seqcls",
+      "spec": {
+        "name": "bge_support_ft_s2026",
+        "kind": "hf_seqcls",
+        "objective": "support",
+        "seed": 2026,
+        "encoding": null,
+        "match": null,
+        "path": "eval_v2/runs/e2/support_s2026/model",
+        "model_key": null,
+        "base_model": null,
+        "spm": null,
+        "query_max_tokens": null,
+        "max_length": 1024,
+        "micro": null,
+        "dtype": "fp32",
+        "instruction": null
+      },
+      "spec_sha256": "cbe3f855a2d8a70b551c6fbdea4eadf0cc8f21fbc2895af9dcc5717a37a73cd4",
+      "target": "sealed",
+      "started": "2026-11-02T16:55:31+00:00",
+      "device": "cuda",
+      "env": {
+        "python": "3.10.12",
+        "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+        "host": "<gpu-host>",
+        "HF_ENDPOINT": "https://hf-mirror.com",
+        "torch": "2.7.1+cu118",
+        "cuda_available": true,
+        "visible_gpus": [
+          "Tesla P40 (23.9 GB, cc 6.1)"
+        ],
+        "transformers": "5.19.0",
+        "CUDA_VISIBLE_DEVICES": "0"
+      },
+      "script_sha256": "130c9faa94a82337deedb836b705df0f30e4f7d2127d92f636091211f762f807",
+      "optional": false,
+      "resolved_path": "/home/<user>/UUM/EEE_research/expert_testset_v1/eval_v2/runs/e2/support_s2026/model",
+      "weights_sha256": {
+        "model.safetensors": "27f00c19c18be3632e7b57d4f400b10b1bc86a7fe8dd8b3bae748d6665b21f07"
+      },
+      "batch_size_used": 16,
+      "info": {
+        "num_labels": 1,
+        "id2label": {
+          "0": "LABEL_0"
+        },
+        "positive_index": null,
+        "score": "logit",
+        "max_length": 1024,
+        "truncation": "only_second",
+        "pair_order": "query_first",
+        "n_truncated": 0,
+        "longest_first_fallback": 0,
+        "tokenizer_class": "XLMRobertaTokenizer",
+        "dtype_used": "fp32"
+      },
+      "status": "ok",
+      "n_pairs": 3520,
+      "score_min": -9.839797019958496,
+      "score_max": 10.06320571899414,
+      "scores_sha256": "4461269e6f725e982c4878934496e072022b05462a6f106fe095aaf328818289",
+      "finished": "2026-11-02T16:58:51+00:00",
+      "seconds": 200.0,
+      "n_q_trunc": null,
+      "n_e_trunc": null
+    },
+    "bge_support_ft_s3407": {
+      "name": "bge_support_ft_s3407",
+      "kind": "hf_seqcls",
+      "spec": {
+        "name": "bge_support_ft_s3407",
+        "kind": "hf_seqcls",
+        "objective": "support",
+        "seed": 3407,
+        "encoding": null,
+        "match": null,
+        "path": "eval_v2/runs/e2/support_s3407/model",
+        "model_key": null,
+        "base_model": null,
+        "spm": null,
+        "query_max_tokens": null,
+        "max_length": 1024,
+        "micro": null,
+        "dtype": "fp32",
+        "instruction": null
+      },
+      "spec_sha256": "022b8b9f6872db3fc7f44ab503436f56423c734a41f555f27c46f33fee0f6d3a",
+      "target": "sealed",
+      "started": "2026-11-02T16:58:51+00:00",
+      "device": "cuda",
+      "env": {
+        "python": "3.10.12",
+        "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+        "host": "<gpu-host>",
+        "HF_ENDPOINT": "https://hf-mirror.com",
+        "torch": "2.7.1+cu118",
+        "cuda_available": true,
+        "visible_gpus": [
+          "Tesla P40 (23.9 GB, cc 6.1)"
+        ],
+        "transformers": "5.19.0",
+        "CUDA_VISIBLE_DEVICES": "0"
+      },
+      "script_sha256": "130c9faa94a82337deedb836b705df0f30e4f7d2127d92f636091211f762f807",
+      "optional": false,
+      "resolved_path": "/home/<user>/UUM/EEE_research/expert_testset_v1/eval_v2/runs/e2/support_s3407/model",
+      "weights_sha256": {
+        "model.safetensors": "8ce88d3e930440073ce6408725f6521b4ededc688375b29ada6589d608ec0e8f"
+      },
+      "batch_size_used": 16,
+      "info": {
+        "num_labels": 1,
+        "id2label": {
+          "0": "LABEL_0"
+        },
+        "positive_index": null,
+        "score": "logit",
+        "max_length": 1024,
+        "truncation": "only_second",
+        "pair_order": "query_first",
+        "n_truncated": 0,
+        "longest_first_fallback": 0,
+        "tokenizer_class": "XLMRobertaTokenizer",
+        "dtype_used": "fp32"
+      },
+      "status": "ok",
+      "n_pairs": 3520,
+      "score_min": -9.225980758666992,
+      "score_max": 8.202988624572754,
+      "scores_sha256": "0ce34e19ac8f0485213f0b11cfdc6061d1458ce4ce17efc0a109a20e18dc23e0",
+      "finished": "2026-11-02T17:02:11+00:00",
+      "seconds": 200.3,
+      "n_q_trunc": null,
+      "n_e_trunc": null
+    },
+    "bge_relevance_ft_s42": {
+      "name": "bge_relevance_ft_s42",
+      "kind": "hf_seqcls",
+      "spec": {
+        "name": "bge_relevance_ft_s42",
+        "kind": "hf_seqcls",
+        "objective": "relevance",
+        "seed": 42,
+        "encoding": null,
+        "match": null,
+        "path": "eval_v2/runs/e2/relevance_s42/model",
+        "model_key": null,
+        "base_model": null,
+        "spm": null,
+        "query_max_tokens": null,
+        "max_length": 1024,
+        "micro": null,
+        "dtype": "fp32",
+        "instruction": null
+      },
+      "spec_sha256": "cd386a21eb2d6432189ac88ecfe845b133070bca6ce4a85d96160b9170ed58a7",
+      "target": "sealed",
+      "started": "2026-11-02T17:02:12+00:00",
+      "device": "cuda",
+      "env": {
+        "python": "3.10.12",
+        "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+        "host": "<gpu-host>",
+        "HF_ENDPOINT": "https://hf-mirror.com",
+        "torch": "2.7.1+cu118",
+        "cuda_available": true,
+        "visible_gpus": [
+          "Tesla P40 (23.9 GB, cc 6.1)"
+        ],
+        "transformers": "5.19.0",
+        "CUDA_VISIBLE_DEVICES": "0"
+      },
+      "script_sha256": "130c9faa94a82337deedb836b705df0f30e4f7d2127d92f636091211f762f807",
+      "optional": false,
+      "resolved_path": "/home/<user>/UUM/EEE_research/expert_testset_v1/eval_v2/runs/e2/relevance_s42/model",
+      "weights_sha256": {
+        "model.safetensors": "a2429c2218a65224d825f4a9c0ca9ec40aafcc3265b5ce983f7f0f2d714bc074"
+      },
+      "batch_size_used": 16,
+      "info": {
+        "num_labels": 1,
+        "id2label": {
+          "0": "LABEL_0"
+        },
+        "positive_index": null,
+        "score": "logit",
+        "max_length": 1024,
+        "truncation": "only_second",
+        "pair_order": "query_first",
+        "n_truncated": 0,
+        "longest_first_fallback": 0,
+        "tokenizer_class": "XLMRobertaTokenizer",
+        "dtype_used": "fp32"
+      },
+      "status": "ok",
+      "n_pairs": 3520,
+      "score_min": -6.992887020111084,
+      "score_max": 10.945843696594238,
+      "scores_sha256": "59ef17fd1afcdbaf46a269c1cfceb4a991c3eb2718d840b909ce30015c7282ab",
+      "finished": "2026-11-02T17:05:32+00:00",
+      "seconds": 200.6,
+      "n_q_trunc": null,
+      "n_e_trunc": null
+    },
+    "bge_relevance_ft_s2026": {
+      "name": "bge_relevance_ft_s2026",
+      "kind": "hf_seqcls",
+      "spec": {
+        "name": "bge_relevance_ft_s2026",
+        "kind": "hf_seqcls",
+        "objective": "relevance",
+        "seed": 2026,
+        "encoding": null,
+        "match": null,
+        "path": "eval_v2/runs/e2/relevance_s2026/model",
+        "model_key": null,
+        "base_model": null,
+        "spm": null,
+        "query_max_tokens": null,
+        "max_length": 1024,
+        "micro": null,
+        "dtype": "fp32",
+        "instruction": null
+      },
+      "spec_sha256": "b93190ef611f877c9dc1e24bf716967075a68a888835ce6e03f4c596872aca52",
+      "target": "sealed",
+      "started": "2026-11-02T17:05:33+00:00",
+      "device": "cuda",
+      "env": {
+        "python": "3.10.12",
+        "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+        "host": "<gpu-host>",
+        "HF_ENDPOINT": "https://hf-mirror.com",
+        "torch": "2.7.1+cu118",
+        "cuda_available": true,
+        "visible_gpus": [
+          "Tesla P40 (23.9 GB, cc 6.1)"
+        ],
+        "transformers": "5.19.0",
+        "CUDA_VISIBLE_DEVICES": "0"
+      },
+      "script_sha256": "130c9faa94a82337deedb836b705df0f30e4f7d2127d92f636091211f762f807",
+      "optional": false,
+      "resolved_path": "/home/<user>/UUM/EEE_research/expert_testset_v1/eval_v2/runs/e2/relevance_s2026/model",
+      "weights_sha256": {
+        "model.safetensors": "d51b03e777f8beeca83e43214d4f5aa1d621f700fda69872ac175e7de9609b0d"
+      },
+      "batch_size_used": 16,
+      "info": {
+        "num_labels": 1,
+        "id2label": {
+          "0": "LABEL_0"
+        },
+        "positive_index": null,
+        "score": "logit",
+        "max_length": 1024,
+        "truncation": "only_second",
+        "pair_order": "query_first",
+        "n_truncated": 0,
+        "longest_first_fallback": 0,
+        "tokenizer_class": "XLMRobertaTokenizer",
+        "dtype_used": "fp32"
+      },
+      "status": "ok",
+      "n_pairs": 3520,
+      "score_min": -5.1071391105651855,
+      "score_max": 10.497435569763184,
+      "scores_sha256": "66486b24611ee3b31e9032b18e9f15a6f8e4ede64716f2090822a7e53f115cb3",
+      "finished": "2026-11-02T17:08:53+00:00",
+      "seconds": 200.8,
+      "n_q_trunc": null,
+      "n_e_trunc": null
+    },
+    "bge_relevance_ft_s3407": {
+      "name": "bge_relevance_ft_s3407",
+      "kind": "hf_seqcls",
+      "spec": {
+        "name": "bge_relevance_ft_s3407",
+        "kind": "hf_seqcls",
+        "objective": "relevance",
+        "seed": 3407,
+        "encoding": null,
+        "match": null,
+        "path": "eval_v2/runs/e2/relevance_s3407/model",
+        "model_key": null,
+        "base_model": null,
+        "spm": null,
+        "query_max_tokens": null,
+        "max_length": 1024,
+        "micro": null,
+        "dtype": "fp32",
+        "instruction": null
+      },
+      "spec_sha256": "9c3957580f4a8c783350de70021231cab60ab00b2fa666dad7dff2330d025f89",
+      "target": "sealed",
+      "started": "2026-11-02T17:08:54+00:00",
+      "device": "cuda",
+      "env": {
+        "python": "3.10.12",
+        "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+        "host": "<gpu-host>",
+        "HF_ENDPOINT": "https://hf-mirror.com",
+        "torch": "2.7.1+cu118",
+        "cuda_available": true,
+        "visible_gpus": [
+          "Tesla P40 (23.9 GB, cc 6.1)"
+        ],
+        "transformers": "5.19.0",
+        "CUDA_VISIBLE_DEVICES": "0"
+      },
+      "script_sha256": "130c9faa94a82337deedb836b705df0f30e4f7d2127d92f636091211f762f807",
+      "optional": false,
+      "resolved_path": "/home/<user>/UUM/EEE_research/expert_testset_v1/eval_v2/runs/e2/relevance_s3407/model",
+      "weights_sha256": {
+        "model.safetensors": "b25a42a7ac2f7eca7a030b0b15ef2907ce925dddbf87114308a9b572be8b83ed"
+      },
+      "batch_size_used": 16,
+      "info": {
+        "num_labels": 1,
+        "id2label": {
+          "0": "LABEL_0"
+        },
+        "positive_index": null,
+        "score": "logit",
+        "max_length": 1024,
+        "truncation": "only_second",
+        "pair_order": "query_first",
+        "n_truncated": 0,
+        "longest_first_fallback": 0,
+        "tokenizer_class": "XLMRobertaTokenizer",
+        "dtype_used": "fp32"
+      },
+      "status": "ok",
+      "n_pairs": 3520,
+      "score_min": -6.939298629760742,
+      "score_max": 10.516165733337402,
+      "scores_sha256": "422b8b51ccbb19be6b5aab4a35a585526686654facca70219c579502ce20a78d",
+      "finished": "2026-11-02T17:12:15+00:00",
+      "seconds": 201.0,
+      "n_q_trunc": null,
+      "n_e_trunc": null
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "questions": 176,
+  "pairs": 3520,
+  "k": 20,
+  "corpus": "/home/<user>/UUM/EEE_research/experiments/stage4_retraining/actual_retrieval/retrieval_corpus.sqlite",
+  "corpus_docs": 1823418,
+  "retrieval": "BM25 char bigrams k1=1.2 b=0.75 over the full corpus; query = final question text only",
+  "reference_used_for_retrieval": false,
+  "own_record_fragments_skipped": 0,
+  "contexts": {
+    "original_medical_train_fragment": 2860,
+    "source_line_context_title_present": 660
+  },
+  "seconds": 106.6,
+  "final_questions_sha256": "af0b2b4d34a84a4be57524c84788df938e295fd3e9afd263b25d7b7c70b5aeb3",
+  "pools_sha256": "6c228959456ad06765adc84f86811eb0abe410901769fe5013bd7d6559de4659"
+}

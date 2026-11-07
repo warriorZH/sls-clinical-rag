@@ -1,0 +1,57 @@
+======================================================================
+2026-10-26T09:17:31+00:00  target=sealed  device=cuda  题数=176  候选=3520
+环境：{"python": "3.10.12", "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35", "host": "<gpu-host>", "torch": "2.7.1+cu118", "cuda_available": true, "gpus": ["Tesla P40 (24 GB)", "Tesla P40 (22 GB)"], "transformers": "5.19.0", "HF_ENDPOINT": "https://hf-mirror.com"}
+----------------------------------------------------------------------
+[support_ce_s42] Support-CE  kind=eee_ce_pt  path=/home/<user>/UUM/EEE_research/experiments/stage4_retraining/support_42/best_checkpoint.pt
+  计算检查点 SHA256 …
+  完成：3520 条，分数范围 [0.0046, 0.9986]，截断 1360 条，全部同分的题 0 道
+----------------------------------------------------------------------
+[support_ce_s2026] Support-CE  kind=eee_ce_pt  path=/home/<user>/UUM/EEE_research/experiments/stage4_retraining/support_2026/best_checkpoint.pt
+  计算检查点 SHA256 …
+  完成：3520 条，分数范围 [0.0048, 0.9989]，截断 1360 条，全部同分的题 0 道
+----------------------------------------------------------------------
+[support_ce_s3407] Support-CE  kind=eee_ce_pt  path=/home/<user>/UUM/EEE_research/experiments/stage4_retraining/support_3407/best_checkpoint.pt
+  计算检查点 SHA256 …
+  完成：3520 条，分数范围 [0.0028, 0.9992]，截断 1360 条，全部同分的题 0 道
+----------------------------------------------------------------------
+[relevance_ce_s42] Relevance-CE  kind=eee_ce_pt  path=/home/<user>/UUM/EEE_research/experiments/stage4_retraining/relevance_42/best_checkpoint.pt
+  计算检查点 SHA256 …
+  完成：3520 条，分数范围 [0.0117, 0.9999]，截断 1360 条，全部同分的题 0 道
+----------------------------------------------------------------------
+[relevance_ce_s2026] Relevance-CE  kind=eee_ce_pt  path=/home/<user>/UUM/EEE_research/experiments/stage4_retraining/relevance_2026/best_checkpoint.pt
+  计算检查点 SHA256 …
+  完成：3520 条，分数范围 [0.0789, 0.9995]，截断 1360 条，全部同分的题 0 道
+----------------------------------------------------------------------
+[relevance_ce_s3407] Relevance-CE  kind=eee_ce_pt  path=/home/<user>/UUM/EEE_research/experiments/stage4_retraining/relevance_3407/best_checkpoint.pt
+  计算检查点 SHA256 …
+  完成：3520 条，分数范围 [0.0549, 0.9991]，截断 1360 条，全部同分的题 0 道
+----------------------------------------------------------------------
+[bm25] BM25  kind=bm25_rank  path=
+  完成：3520 条，分数范围 [-20.0000, -1.0000]，截断 0 条，全部同分的题 0 道
+----------------------------------------------------------------------
+[bge_reranker_v2_m3] bge-reranker-v2-m3  kind=hf_seqcls  path=/home/<user>/.cache/huggingface/hub/models--BAAI--bge-reranker-v2-m3/snapshots/953dc6f6f85a1b2dbfca4c34a2796e7dde08d41e
+  计算权重文件 SHA256 …
+  完成：3520 条，分数范围 [-11.0028, 5.0990]，截断 0 条，全部同分的题 0 道
+----------------------------------------------------------------------
+[qwen3_reranker_0_6b] Qwen3-Reranker-0.6B  kind=qwen3_reranker  path=/home/<user>/.cache/huggingface/hub/models--Qwen--Qwen3-Reranker-0.6B/snapshots/e61197ed45024b0ed8a2d74b80b4d909f1255473
+  计算权重文件 SHA256 …
+  完成：3520 条，分数范围 [-11.2880, -0.0004]，截断 0 条，全部同分的题 0 道
+[跳过] llm_judge_qwen2_5_7b：enabled=false
+======================================================================
+汇总（sealed）：
+  support_ce_s42               ok      截断 1360，372.0 秒
+  support_ce_s2026             ok      截断 1360，74.4 秒
+  support_ce_s3407             ok      截断 1360，74.7 秒
+  relevance_ce_s42             ok      截断 1360，74.7 秒
+  relevance_ce_s2026           ok      截断 1360，74.6 秒
+  relevance_ce_s3407           ok      截断 1360，74.6 秒
+  bm25                         ok      截断 0，0.1 秒
+  bge_reranker_v2_m3           ok      截断 0，200.3 秒
+  qwen3_reranker_0_6b          ok      截断 0，351.3 秒
+  种子间 Spearman  support_ce_s42 vs support_ce_s2026：0.859
+  种子间 Spearman  support_ce_s42 vs support_ce_s3407：0.854
+  种子间 Spearman  support_ce_s2026 vs support_ce_s3407：0.837
+  种子间 Spearman  relevance_ce_s42 vs relevance_ce_s2026：0.594
+  种子间 Spearman  relevance_ce_s42 vs relevance_ce_s3407：0.399
+  种子间 Spearman  relevance_ce_s2026 vs relevance_ce_s3407：0.360
+运行清单：/home/<user>/UUM/EEE_research/expert_testset_v1/eval_v1/scores/sealed/RUN_MANIFEST.json

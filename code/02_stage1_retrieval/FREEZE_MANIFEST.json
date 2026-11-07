@@ -1,0 +1,15 @@
+{
+    "created":  "2026-10-26T17:04:31+08:00",
+    "purpose":  "封存集打分之前的冻结记录；请与预注册计划、实验对比方案一起上传 OSF 或提交到带时间记录的 git 仓库。",
+    "files":  {
+                  "final_questions.json":  "af0b2b4d34a84a4be57524c84788df938e295fd3e9afd263b25d7b7c70b5aeb3",
+                  "sealed_pools.jsonl":  "6c228959456ad06765adc84f86811eb0abe410901769fe5013bd7d6559de4659",
+                  "phase2_gold_labels.jsonl":  "1311d616353f78fb843bfae58d5338877b5d4ec836d0ccd6ab47ec58334f4e7a",
+                  "预注册分析计划.md":  "68b9e7353295cf9107a5ec07f89d257fcd0f8bcde62a3b35150c87c9d2b2c47c",
+                  "标注规范_v1.1.md":  "c11361eec4e4caf09b9e5b774f7869de160839a215651f4b10b52202d8ddde44",
+                  "eval_v1/实验对比方案.md":  "1b8257ff78b70d34aaf42e81dec2a650e43939cddc7422a2c360315a342c5775",
+                  "eval_v1/server_score.py":  "16bd4f13b8c7adbb4a12a9941efb9a36d20f26984ee4a0da2734e3fc0acb46d3",
+                  "eval_v1/evaluate.py":  "6b90ede8f8e48eeafd379d8b2dd7aa6c5355e2c87e697ecb967d9419fb682718",
+                  "eval_v1/models.json":  "a8711396b91c7feab5c5d7f26d4974f4f7d8cd446c41bf71ce6c8c1c17f49674"
+              }
+}

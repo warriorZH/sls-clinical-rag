@@ -1,0 +1,283 @@
+{
+  "annotators": [
+    "A",
+    "B",
+    "C"
+  ],
+  "measures": [
+    {
+      "measure": "题目纳入(1/0)",
+      "pairs": {
+        "A-B": {
+          "n_units": 180,
+          "n_questions": 180,
+          "kappa": 0.7193347193347194,
+          "ci95": [
+            0.27884615384615397,
+            1.0
+          ],
+          "percent_agreement": 0.9833333333333333,
+          "interpretation": "较强"
+        },
+        "A-C": {
+          "n_units": 180,
+          "n_questions": 180,
+          "kappa": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "percent_agreement": 1.0,
+          "interpretation": "几乎完全一致"
+        },
+        "B-C": {
+          "n_units": 180,
+          "n_questions": 180,
+          "kappa": 0.7193347193347194,
+          "ci95": [
+            0.27884615384615397,
+            1.0
+          ],
+          "percent_agreement": 0.9833333333333333,
+          "interpretation": "较强"
+        }
+      },
+      "multi": {
+        "raters": [
+          "A",
+          "B",
+          "C"
+        ],
+        "fleiss_kappa": 0.8275862068965526,
+        "krippendorff_alpha": 0.8279054916985951,
+        "alpha_ci95": [
+          0.6066267698146257,
+          1.0
+        ],
+        "alpha_level": "nominal",
+        "n_units_any": 180,
+        "n_units_complete": 180
+      }
+    },
+    {
+      "measure": "问题泄露(1/0)",
+      "pairs": {
+        "A-B": {
+          "n_units": 180,
+          "n_questions": 180,
+          "kappa": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "percent_agreement": 1.0,
+          "interpretation": "几乎完全一致"
+        },
+        "A-C": {
+          "n_units": 180,
+          "n_questions": 180,
+          "kappa": 0.9771573604060914,
+          "ci95": [
+            0.9200710479573713,
+            1.0
+          ],
+          "percent_agreement": 0.9944444444444445,
+          "interpretation": "几乎完全一致"
+        },
+        "B-C": {
+          "n_units": 180,
+          "n_questions": 180,
+          "kappa": 0.9771573604060914,
+          "ci95": [
+            0.9200710479573713,
+            1.0
+          ],
+          "percent_agreement": 0.9944444444444445,
+          "interpretation": "几乎完全一致"
+        }
+      },
+      "multi": {
+        "raters": [
+          "A",
+          "B",
+          "C"
+        ],
+        "fleiss_kappa": 0.984686932849365,
+        "krippendorff_alpha": 0.9847152903811253,
+        "alpha_ci95": [
+          0.9457964601769911,
+          1.0
+        ],
+        "alpha_level": "nominal",
+        "n_units_any": 180,
+        "n_units_complete": 180
+      }
+    },
+    {
+      "measure": "要点判定(保留/修改/删除，三分类)",
+      "pairs": {
+        "A-B": {
+          "n_units": 412,
+          "n_questions": 180,
+          "kappa": 0.8420265589652485,
+          "ci95": [
+            0.7811729916214885,
+            0.8965361525792913
+          ],
+          "percent_agreement": 0.9271844660194175,
+          "interpretation": "几乎完全一致"
+        },
+        "A-C": {
+          "n_units": 412,
+          "n_questions": 180,
+          "kappa": 0.8158603611765416,
+          "ci95": [
+            0.7498157531091663,
+            0.8775906252332496
+          ],
+          "percent_agreement": 0.9101941747572816,
+          "interpretation": "几乎完全一致"
+        },
+        "B-C": {
+          "n_units": 412,
+          "n_questions": 180,
+          "kappa": 0.8384150198628577,
+          "ci95": [
+            0.7687107420419461,
+            0.9031754914451046
+          ],
+          "percent_agreement": 0.9247572815533981,
+          "interpretation": "几乎完全一致"
+        }
+      },
+      "multi": {
+        "raters": [
+          "A",
+          "B",
+          "C"
+        ],
+        "fleiss_kappa": 0.8315753175135084,
+        "krippendorff_alpha": 0.8317115834378502,
+        "alpha_ci95": [
+          0.7776870941414428,
+          0.8819311317683655
+        ],
+        "alpha_level": "nominal",
+        "n_units_any": 412,
+        "n_units_complete": 412
+      }
+    },
+    {
+      "measure": "要点保留与否(保留或修改 vs 删除)",
+      "pairs": {
+        "A-B": {
+          "n_units": 412,
+          "n_questions": 180,
+          "kappa": 0.8763010408326661,
+          "ci95": [
+            0.6929439131558542,
+            1.0
+          ],
+          "percent_agreement": 0.9927184466019418,
+          "interpretation": "几乎完全一致"
+        },
+        "A-C": {
+          "n_units": 412,
+          "n_questions": 180,
+          "kappa": 0.6170054536440258,
+          "ci95": [
+            0.3947730398899586,
+            0.8206225918904042
+          ],
+          "percent_agreement": 0.9635922330097088,
+          "interpretation": "较强"
+        },
+        "B-C": {
+          "n_units": 412,
+          "n_questions": 180,
+          "kappa": 0.50763510821936,
+          "ci95": [
+            0.26050420168067223,
+            0.7456643404960961
+          ],
+          "percent_agreement": 0.9563106796116505,
+          "interpretation": "中等"
+        }
+      },
+      "multi": {
+        "raters": [
+          "A",
+          "B",
+          "C"
+        ],
+        "fleiss_kappa": 0.638643451143452,
+        "krippendorff_alpha": 0.6389358108108107,
+        "alpha_ci95": [
+          0.41121799785374835,
+          0.8243727598566308
+        ],
+        "alpha_level": "nominal",
+        "n_units_any": 412,
+        "n_units_complete": 412
+      }
+    }
+  ],
+  "draft_point_modification": {
+    "A": {
+      "draft_points": 412,
+      "filled": 412,
+      "kept_unchanged": 265,
+      "modified": 133,
+      "deleted": 14,
+      "added_points": 29,
+      "questions_excluded": 7,
+      "questions_with_leak": 25
+    },
+    "B": {
+      "draft_points": 412,
+      "filled": 412,
+      "kept_unchanged": 288,
+      "modified": 113,
+      "deleted": 11,
+      "added_points": 41,
+      "questions_excluded": 4,
+      "questions_with_leak": 25
+    },
+    "C": {
+      "draft_points": 412,
+      "filled": 412,
+      "kept_unchanged": 268,
+      "modified": 117,
+      "deleted": 27,
+      "added_points": 53,
+      "questions_excluded": 7,
+      "questions_with_leak": 26
+    }
+  },
+  "text_agreement": {
+    "A-B": {
+      "n_questions": 173,
+      "points_identical": 0.47398843930635837,
+      "points_mean_f1": 0.7469129778378332,
+      "add_info_identical": 0.15606936416184972,
+      "add_info_mean_jaccard": 0.38370487358926675,
+      "leak_fragments_identical": 0.9479768786127167
+    },
+    "A-C": {
+      "n_questions": 173,
+      "points_identical": 0.5317919075144508,
+      "points_mean_f1": 0.7898247545646391,
+      "add_info_identical": 0.30057803468208094,
+      "add_info_mean_jaccard": 0.4682996996580813,
+      "leak_fragments_identical": 0.9364161849710982
+    },
+    "B-C": {
+      "n_questions": 173,
+      "points_identical": 0.4913294797687861,
+      "points_mean_f1": 0.8008557916072367,
+      "add_info_identical": 0.1676300578034682,
+      "add_info_mean_jaccard": 0.3962844732055886,
+      "leak_fragments_identical": 0.930635838150289
+    }
+  }
+}

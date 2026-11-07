@@ -1,0 +1,32 @@
+{
+  "version": "expert_testset_v1",
+  "created": "2026-10-24",
+  "seed": "20261024",
+  "selection": "score-blind; hash order sha256(seed|stratum|type|task_id); one question per case/group; exclude tasks found in any earlier evaluation/review/audit file; exclude char 2-3gram TF-IDF cosine >= 0.85 to any training case or to an already selected question",
+  "strata": {
+    "fresh_med": "Medical Records cases never used as a task, evidence source or pilot in any earlier version (from the 100 unseen cases of the stage-4 real-retrieval pool)",
+    "heldout_med": "stage-4 held-out test split; never used for training/tuning; excluded if it appears in any real-retrieval, review, audit, near-duplicate or QA file"
+  },
+  "hallu_not_included": "only 17 untouched Hallu test items remain and at most 4 fit the case diagnosis/principle scope; Hallu results stay exploratory in the paper",
+  "counts": {
+    "fresh_med/diagnosis": 73,
+    "heldout_med/principle": 80,
+    "heldout_med/diagnosis": 27
+  },
+  "total_questions": 180,
+  "stats": {
+    "fresh_excluded_touched": 19,
+    "fresh_excluded_too_few_source_points": 8,
+    "heldout_excluded_touched": 97,
+    "eligible": {
+      "fresh_med/diagnosis": 73,
+      "heldout_med/principle": 829,
+      "heldout_med/diagnosis": 830
+    },
+    "excluded_same_case_or_group": 1
+  },
+  "hard_touched_task_ids": 853,
+  "model_scores_or_labels_used": false,
+  "points_are_drafts_not_gold": true,
+  "sha256_selection": "4114e13c4e31b3088300e100f94c25ccbd01065f8f7c559f9f43024e869e9939"
+}
