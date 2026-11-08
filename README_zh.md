@@ -2,9 +2,9 @@
 
 本仓库包含下面这篇论文的数据、代码、登记文件和实验输出：
 
-> {{CITATION_TEXT}}
+> Zhang P, Hu J, Li X, Hao B, Abu Bakar J. Relevant is not enough: Support-label supervision for evidence selection in retrieval-augmented clinical question answering. Manuscript submitted to *Artificial Intelligence in Medicine*, 2026.
 
-**状态：** {{RELEASE_STATUS}} · **存档：** {{ZENODO_DOI}} · **预注册（OSF）：** {{OSF_LINKS}}
+**状态：** v1.0，配合投稿至 *Artificial Intelligence in Medicine* 的稿件 · **预注册（OSF）：** [第 1 阶段](https://osf.io/gj48z) · [第 2 阶段](https://osf.io/e37na) · [第 3 阶段](https://osf.io/e3gkh)
 
 本研究是一项预注册的标签翻转研究：
 
@@ -30,24 +30,25 @@
 | `code/` | 按阶段排列的全部代码 |
 | `docs/registration/` | 三次登记文件与登记后变更记录（原文） |
 | `docs/annotation/` | 标注规范与仲裁说明 |
-| `docs/human_audit/` | LLM 评审的人工抽查：方案与结果 |
+| `docs/label_review/` | 临床医师对封存集 25% 标签的抽检复核：方案与汇总结果 |
 | `DATASHEET.md` | 数据来源、构成、标注过程与局限 |
 | `SHA256SUMS.txt` | 全部文件的校验值 |
 
 ## 标签来源（复用前请阅读）
 
-- **封存集要点与支持标签：** 要点先由规则程序草拟，再由三个 LLM 标注代理核验和标注，分歧经仲裁。这些是 **LLM 代理标签，不是专家标签**；“完整支持”的一致性较低（α = 0.220）。
+- **封存集要点与支持标签：** 要点先由规则程序草拟，再由三个 LLM 标注代理核验并预标注，分歧按标注规范仲裁。标注者在“完整支持”上存在分歧的全部 161 个候选（主要检索指标依据的正是这一标签），由中医专家郝斌逐条复核，确认了仲裁结果；其余标签未经专家重新标注。三位标注者在“完整支持”上的一致性较低（α = 0.220）。
 - **外部集参考答案：** 由 TCM-BEST4SDT 的中医专家撰写和审定，本研究按规则转为要点。
 - **训练对标签：** 来自本项目早先的证据构建流程。支持必然相关。
-- **答案评审：** 由开源模型完成。{{HUMAN_AUDIT_SUMMARY_ZH}}
+- **临床医师复核：** 一位临床医师合著者以确认式复核了 25% 的分层样本（44 题、880 条候选）。已复核要点的正确率为 80.6%，支持度一致率为 94.8%（κ = 0.79）。标签从未把“完整支持”判高，但漏判约一半，因此覆盖率指标偏保守；详见 `docs/label_review/`。
+- **答案评审：** 由开源模型完成。评审未经人工校准（登记时计划的答案抽查没有进行）；另报告不依赖评审的逐字召回率。
 
 ## 未公开的内容及原因
 
 | 内容 | 原因 | 获取方式 |
 |---|---|---|
-| 封存题目、候选段落、训练对的原文 | {{TEXT_RELEASE_REASON_ZH}} | {{TEXT_ACCESS_ZH}} |
-| 封存集的段落级支持与相关标签，以及由其派生的内容（oracle 证据列表、oracle 条件的证据、答案和评审） | 保持封存集可继续作为留出测试集 | {{GOLD_ACCESS_ZH}} |
-| 微调后的选择器权重 | 体积大 | {{WEIGHTS_ACCESS_ZH}} |
+| 封存题目、候选段落、训练对的原文 | 原始语料的再分发许可尚未确认 | 可根据所给编号、字符位置和校验值从原始语料还原 |
+| 封存集的段落级支持与相关标签，以及由其派生的内容（oracle 证据列表、oracle 条件的证据、答案和评审） | 保持封存集可继续作为留出测试集 | 可向通讯作者合理申请 |
+| 微调后的选择器权重 | 体积大 | 可向通讯作者合理申请 |
 | TCM-BEST4SDT 评测代码 | 第三方代码（Apache-2.0） | 请从该基准的仓库获取 |
 
 每个段落都给出了编号、字符位置和 SHA-256。拥有原始语料的研究者可以据此还原段落原文，并逐一核对。
@@ -63,10 +64,10 @@
 
 ## 许可
 
-- **代码：** {{CODE_LICENSE}}。
-- **本研究产生的标注、标签与输出：** {{DATA_LICENSE}}。
+- **代码：** MIT。
+- **本研究产生的标注、标签与输出：** CC BY 4.0。
 - **`data/external/`：** 派生自 TCM-BEST4SDT（CC BY 4.0），使用时请同时引用 Li 等人的工作。
 
 ## 联系方式
 
-{{CONTACT}}
+Peihua Zhang (maintainer, zhangpeihua@hbfu.edu.cn); corresponding author: Juhaida Abu Bakar (juhaida.ab@uum.edu.my)

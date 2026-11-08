@@ -1,17 +1,56 @@
 cff-version: 1.2.0
 message: "If you use this resource, please cite the paper and this release."
 title: "Relevant is not enough: support-label supervision for evidence selection in retrieval-augmented clinical question answering (data and code)"
-version: "{{RELEASE_TAG}}"
-date-released: "{{RELEASE_DATE}}"
-doi: "{{ZENODO_DOI}}"
-repository-code: "{{REPO_URL}}"
-license: "{{CODE_LICENSE}}"
+version: "v1.0"
+date-released: "2026-11-07"
+repository-code: "https://github.com/warriorZH/sls-clinical-rag"
+license: "MIT"
 authors:
-{{CFF_AUTHORS}}
+  - family-names: Zhang
+    given-names: Peihua
+    email: zhangpeihua@hbfu.edu.cn
+    orcid: "https://orcid.org/0009-0004-5715-9458"
+    affiliation: "Hebei Finance University; Universiti Utara Malaysia"
+  - family-names: Hu
+    given-names: Jingyi
+    orcid: "https://orcid.org/0009-0000-9742-7614"
+    affiliation: "Hebei Finance University"
+  - family-names: Li
+    given-names: Xiangmeng
+    orcid: "https://orcid.org/0000-0003-1263-5495"
+    affiliation: "The Second Affiliated Hospital of Chongqing Medical University; Affiliated Hospital of Hebei University"
+  - family-names: Hao
+    given-names: Bin
+    affiliation: "Hebei University"
+  - family-names: Abu Bakar
+    given-names: Juhaida
+    email: juhaida.ab@uum.edu.my
+    orcid: "https://orcid.org/0000-0002-2804-2160"
+    affiliation: "Universiti Utara Malaysia"
 preferred-citation:
   type: article
   title: "Relevant is not enough: Support-label supervision for evidence selection in retrieval-augmented clinical question answering"
-  journal: "{{JOURNAL}}"
-  year: "{{PAPER_YEAR}}"
+  journal: "Artificial Intelligence in Medicine (submitted)"
+  year: "2026"
   authors:
-{{CFF_AUTHORS_INDENT}}
+    - family-names: Zhang
+      given-names: Peihua
+      email: zhangpeihua@hbfu.edu.cn
+      orcid: "https://orcid.org/0009-0004-5715-9458"
+      affiliation: "Hebei Finance University; Universiti Utara Malaysia"
+    - family-names: Hu
+      given-names: Jingyi
+      orcid: "https://orcid.org/0009-0000-9742-7614"
+      affiliation: "Hebei Finance University"
+    - family-names: Li
+      given-names: Xiangmeng
+      orcid: "https://orcid.org/0000-0003-1263-5495"
+      affiliation: "The Second Affiliated Hospital of Chongqing Medical University; Affiliated Hospital of Hebei University"
+    - family-names: Hao
+      given-names: Bin
+      affiliation: "Hebei University"
+    - family-names: Abu Bakar
+      given-names: Juhaida
+      email: juhaida.ab@uum.edu.my
+      orcid: "https://orcid.org/0000-0002-2804-2160"
+      affiliation: "Universiti Utara Malaysia"
