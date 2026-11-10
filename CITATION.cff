@@ -1,8 +1,8 @@
 cff-version: 1.2.0
 message: "If you use this resource, please cite the paper and this release."
 title: "Relevant is not enough: support-label supervision for evidence selection in retrieval-augmented clinical question answering (data and code)"
-version: "v1.0"
-date-released: "2026-11-07"
+version: "v1.1"
+date-released: "2026-11-10"
 repository-code: "https://github.com/warriorZH/sls-clinical-rag"
 license: "MIT"
 authors:

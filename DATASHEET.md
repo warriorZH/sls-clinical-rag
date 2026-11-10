@@ -20,7 +20,7 @@ The data were created to test whether evidence selectors for retrieval-augmented
 
 ## Labelling
 
-- **Sealed set:** points were drafted by rules and verified by three LLM annotation agents (three independent GPT-6 LUNA sessions), which pre-annotated every candidate–point pair with a support level (2 full, 1 partial, 0 none) and every candidate with a relevance label; disagreements were adjudicated against the annotation guidelines. A TCM expert (Bin Hao) reviewed and confirmed all 161 adjudicated full-support disagreements; a clinician reviewed a stratified 25% sample (`docs/label_review/`). Agreement: α = 0.220 for full support (AC1 = 0.982), 0.487 for the three-level scale and 0.363 for relevance.
+- **Sealed set:** points were drafted by rules and verified by three LLM annotation agents (three independent GPT-6 LUNA sessions), which pre-annotated every candidate–point pair with a support level (2 full, 1 partial, 0 none) and every candidate with a relevance label; disagreements were adjudicated by an LLM agent against the annotation guidelines, and the labels were frozen with checksums before any selector was scored. After the Stage 1 and Stage 2 registrations, a TCM expert (Bin Hao) reviewed all 161 adjudicated full-support disagreements and confirmed them without changes; a clinician reviewed a stratified 25% sample (`docs/label_review/`). Agreement: α = 0.220 for full support (AC1 = 0.982), 0.487 for the three-level scale and 0.363 for relevance.
 - **Answer judging:** done by open-weight LLM judges. The judges were not calibrated against human raters, because the registered audit of judged answers was not carried out. Literal recall is reported as a judge-free check.
 
 ## Uses
@@ -37,9 +37,10 @@ The data were created to test whether evidence selectors for retrieval-augmented
 - The label flip also changes the share of positives (50.0% vs. 78.6%).
 - Key-point recall does not penalise added errors.
 - The sealed set was evaluated once before the main registration (stage 1).
+- The Stage 2 external-set analyses were specified in an amendment (v2.3) that was hash-frozen before the runs but not deposited on OSF (`docs/registration/README.md`).
 
 ## Distribution and maintenance
 
 - Distributed via https://github.com/warriorZH/sls-clinical-rag.
 - Maintainer: Peihua Zhang (maintainer, zhangpeihua@hbfu.edu.cn); corresponding author: Juhaida Abu Bakar (juhaida.ab@uum.edu.my).
-- Errors will be corrected in tagged releases; the paper refers to release v1.0.
+- Errors will be corrected in tagged releases; the current release is v1.1 (`CHANGELOG.md`).

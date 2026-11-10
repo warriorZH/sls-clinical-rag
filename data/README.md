@@ -42,7 +42,7 @@ These files are derived from TCM-BEST4SDT (Li et al., CC BY 4.0).
 - **Answers:** `aid` (answer ID), `cond`, `qid`, `gen` (G1 = Qwen3-4B-Instruct-2507; G2 = GLM-4-9B-0414), model revision, `prompt` (`main` = evidence-only; `alt` = knowledge-permitted), `k`, `docs` and `answer`.
 - **KPR judgements:** `aid`, `qid`, `cond`, `judge`, `labels` (per point: 2 stated, 1 partial, 0 not stated, X contradicted), `quotes` (supporting span from the answer), `quote_ok` and `abstain`.
 
-Condition codes follow the protocol (`docs/registration/stage2_protocol_v2_zh.md`):
+Condition codes follow the Stage 2 protocol (`docs/registration/osf/stage2_e37na/实验设计方案_v2.md`; external-set codes X00–X09 in the amendment `docs/registration/stage2_amendment_v2.3_protocol_zh.md`; English translations in `docs/registration/en/`):
 
 - G00 closed book; G01 BM25; G02 random; G03 all 20 candidates.
 - G04 and G05: relevance-CE and support-CE, the main comparison. G06 and G07: their stage 1 versions.

@@ -4,7 +4,7 @@
 
 > Zhang P, Hu J, Li X, Hao B, Abu Bakar J. Relevant is not enough: Support-label supervision for evidence selection in retrieval-augmented clinical question answering. Manuscript submitted to *Artificial Intelligence in Medicine*, 2026.
 
-**状态：** v1.0，配合投稿至 *Artificial Intelligence in Medicine* 的稿件 · **预注册（OSF）：** [第 1 阶段](https://osf.io/gj48z) · [第 2 阶段](https://osf.io/e37na) · [第 3 阶段](https://osf.io/e3gkh)
+**状态：** v1.1，配合投稿至 *Artificial Intelligence in Medicine* 的稿件 · **预注册（OSF）：** [第 1 阶段](https://osf.io/gj48z) · [第 2 阶段](https://osf.io/e37na) · [第 3 阶段](https://osf.io/e3gkh)
 
 本研究是一项预注册的标签翻转研究：
 
@@ -28,7 +28,7 @@
 | `results/analysis/` | 分析脚本的汇总输出（论文中的全部数字） |
 | `results/annotation_agreement/` | 封存集标注一致性报告 |
 | `code/` | 按阶段排列的全部代码 |
-| `docs/registration/` | 三次登记文件与登记后变更记录（原文） |
+| `docs/registration/` | 三次 OSF 登记文件的逐字节副本（中文原文）、第 2 阶段修订 v2.3（未提交到 OSF）、登记后变更记录，以及 `docs/registration/en/` 中的英文译本；说明见 `docs/registration/README.md` |
 | `docs/annotation/` | 标注规范与仲裁说明 |
 | `docs/label_review/` | 临床医师对封存集 25% 标签的抽检复核：方案与汇总结果 |
 | `DATASHEET.md` | 数据来源、构成、标注过程与局限 |
@@ -36,7 +36,7 @@
 
 ## 标签来源（复用前请阅读）
 
-- **封存集要点与支持标签：** 要点先由规则程序草拟，再由三个 LLM 标注代理核验并预标注，分歧按标注规范仲裁。标注者在“完整支持”上存在分歧的全部 161 个候选（主要检索指标依据的正是这一标签），由中医专家郝斌逐条复核，确认了仲裁结果；其余标签未经专家重新标注。三位标注者在“完整支持”上的一致性较低（α = 0.220）。
+- **封存集要点与支持标签：** 要点先由规则程序草拟，再由三个 LLM 标注代理核验并预标注，分歧再由 LLM 代理按标注规范仲裁。题目、候选池和标签随后连同校验值一起冻结，冻结后才对任何选择器打分。在第 1、2 阶段登记之后，标注者在“完整支持”上存在分歧的全部 161 个候选（主要检索指标依据的正是这一标签），由中医专家郝斌逐条复核，确认了仲裁结果，未作改动；其余标签未经专家重新标注。三位标注者在“完整支持”上的一致性较低（α = 0.220）。
 - **外部集参考答案：** 由 TCM-BEST4SDT 的中医专家撰写和审定，本研究按规则转为要点。
 - **训练对标签：** 来自本项目早先的证据构建流程。支持必然相关。
 - **临床医师复核：** 一位临床医师合著者以确认式复核了 25% 的分层样本（44 题、880 条候选）。已复核要点的正确率为 80.6%，支持度一致率为 94.8%（κ = 0.79）。标签从未把“完整支持”判高，但漏判约一半，因此覆盖率指标偏保守；详见 `docs/label_review/`。
@@ -60,7 +60,7 @@
 - **脚本路径：** 脚本按原样发布，路径对照见 `code/README.md`。
 - **模型版本与随机种子：** 模型版本固定在 `model_registry.json` 中；训练种子为 42、2026、3407，bootstrap 种子为 20261026。
 
-服务器地址、用户名和本地路径已替换为占位符，代码和登记文件的其余内容均未改动。
+服务器地址、用户名、主机名和本地路径已替换为占位符，其余内容均未改动。`docs/registration/osf/` 中是 OSF 登记文件的原样副本，没有任何改动。外部集的第 2 阶段运行依据修订 v2.3：该修订在运行前已冻结哈希，但没有提交到 OSF（见 `docs/registration/README.md`）。
 
 ## 许可
 

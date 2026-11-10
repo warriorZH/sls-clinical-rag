@@ -4,7 +4,7 @@ Data, code, protocols and outputs for the paper
 
 > Zhang P, Hu J, Li X, Hao B, Abu Bakar J. Relevant is not enough: Support-label supervision for evidence selection in retrieval-augmented clinical question answering. Manuscript submitted to *Artificial Intelligence in Medicine*, 2026.
 
-**Status:** v1.0, accompanying the manuscript submitted to *Artificial Intelligence in Medicine* · **Registrations (OSF):** [Stage 1](https://osf.io/gj48z) · [Stage 2](https://osf.io/e37na) · [Stage 3](https://osf.io/e3gkh)
+**Status:** v1.1, accompanying the manuscript submitted to *Artificial Intelligence in Medicine* · **Registrations (OSF):** [Stage 1](https://osf.io/gj48z) · [Stage 2](https://osf.io/e37na) · [Stage 3](https://osf.io/e3gkh)
 
 This repository supports a pre-registered label-flip study. Evidence selectors were trained on the same 26,432 question–passage pairs under two label definitions, *relevance* and *support*. Only the labels of relevant-but-non-supporting pairs differ. Four selectors (mDeBERTa cross-encoder, bge-reranker-v2-m3, Qwen3-Reranker-0.6B and Qwen3-Reranker-4B) were compared on a 176-question sealed test set and on 300 cases of the expert-annotated TCM-BEST4SDT benchmark, at the retrieval level, the answer level and under the benchmark's expert multiple-choice protocol.
 
@@ -18,12 +18,12 @@ This repository supports a pre-registered label-flip study. Evidence selectors w
 | `data/external/` | The 300 TCM-BEST4SDT cases as used here: questions, required points, reference answers and candidate pools (derived from TCM-BEST4SDT, CC BY 4.0) |
 | `data/training/` | Training, development and test pairs: IDs, groups, relevance label, support label and covered points |
 | `results/stage1_retrieval/` | Stage 1 (registered first): selector scores on the sealed pools |
-| `results/stage2/` | Stage 2 (main registration): selector scores, selected evidence, generated answers, judge labels (KPR and claim support), bge label-flip training logs, run configuration and summary |
+| `results/stage2/` | Stage 2 (main registration): selector scores, selected evidence, generated answers, judge labels (KPR and claim support), bge label-flip training logs, run configuration and summary. The external-set runs follow the Stage 2 amendment v2.3, which was hash-frozen before the runs but not deposited on OSF (`docs/registration/README.md`) |
 | `results/stage3/` | Stage 3 (supplementary registration): Qwen3-Reranker label flip, Qwen3-32B re-judging and the expert multiple-choice protocol |
 | `results/analysis/` | Aggregate outputs of the analysis scripts (all numbers reported in the paper) |
 | `results/annotation_agreement/` | Agreement reports for the sealed-set annotation |
 | `code/` | Sealed-set construction, selector training, generation and judging pipelines and analysis scripts, ordered by stage |
-| `docs/registration/` | The three registrations and the post-registration change log, as registered (Chinese) |
+| `docs/registration/` | Byte-identical copies of the three OSF registrations (Chinese), the Stage 2 amendment v2.3 (not deposited on OSF), the post-registration change log, and English translations in `docs/registration/en/`; see `docs/registration/README.md` |
 | `docs/annotation/` | Annotation guidelines and adjudication notes (Chinese) |
 | `docs/label_review/` | Clinician review of a 25% sample of the sealed-set labels: protocol and aggregate results |
 | `DATASHEET.md` | Provenance, composition, labelling process and limitations of the data |
@@ -33,7 +33,7 @@ Field descriptions are in `data/README.md`.
 
 ## How the labels were produced (please read before reuse)
 
-- **Sealed set: required points and support labels.** Required points were drafted by rules from each record's own analysis. Three LLM annotation agents then verified the points and pre-annotated every candidate–point pair, and disagreements were adjudicated against the annotation guidelines. A TCM expert (Bin Hao) reviewed, item by item, all 161 candidates on which the annotators disagreed about full support, the label behind the primary retrieval metric, and confirmed the adjudicated labels. The remaining labels were not re-annotated by experts. Agreement among the three annotators on full support was low (Krippendorff's α = 0.220); see `results/annotation_agreement/`.
+- **Sealed set: required points and support labels.** Required points were drafted by rules from each record's own analysis. Three LLM annotation agents then verified the points and pre-annotated every candidate–point pair, and disagreements were adjudicated by an LLM agent against the annotation guidelines. The questions, candidate pools and labels were then frozen with checksums before any selector was scored. After the Stage 1 and Stage 2 registrations, a TCM expert (Bin Hao) reviewed, item by item, all 161 candidates on which the annotators disagreed about full support, the label behind the primary retrieval metric, and confirmed the adjudicated labels without changes. The remaining labels were not re-annotated by experts. Agreement among the three annotators on full support was low (Krippendorff's α = 0.220); see `results/annotation_agreement/`.
 - **External set: reference answers.** TCM experts wrote and reviewed these for TCM-BEST4SDT (Li et al.). We converted them into required points by rule; see `docs/external_set_construction_zh.md`.
 - **Training pairs.** Relevance and support labels come from the project's earlier evidence-construction pipeline. A support label of 1 always implies relevance 1 (`data/README.md`).
 - **Clinician review.** A clinician co-author reviewed a stratified 25% sample (44 questions, 880 candidates) in a confirmatory format. 80.6% of the reviewed points were judged correct, and support labels agreed 94.8% (κ = 0.79). The labels never over-called full support but missed about half of it, so the coverage metrics are conservative; see `docs/label_review/`.
@@ -64,7 +64,7 @@ The analysis scripts in `code/05_analysis/` read the files in `results/` and wri
 
 Model repositories and revisions are pinned in `results/stage2/model_registry.json` and `results/stage3/models_registry.json`. Random seeds are 42, 2026 and 3407 for training, and 20261026 for the bootstrap. Frozen input manifests (`FREEZE_MANIFEST*.json`) list the SHA-256 of every input at registration time.
 
-Server addresses, user names and local paths were replaced by placeholders (`<SERVER>`, `<user>`). Nothing else in the code or registered documents was changed.
+Server addresses, user names, host names and local paths were replaced by placeholders (`<SERVER>`, `<user>`, `<gpu-host>`). Nothing else in the code or documents was changed. The files in `docs/registration/osf/` are exact copies of the OSF registrations and were not altered.
 
 ## Licence
 

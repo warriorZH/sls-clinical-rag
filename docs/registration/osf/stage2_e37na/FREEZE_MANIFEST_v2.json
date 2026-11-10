@@ -1,0 +1,35 @@
+{
+    "created":  "2026-10-27T22:43:26+08:00",
+    "purpose":  "eval_v2 运行前的代码与方案冻结记录；与 实验设计方案_v2.md 一起上传 OSF。",
+    "data_frozen_in_v1":  {
+                              "final_questions.json":  "af0b2b4d34a84a4be57524c84788df938e295fd3e9afd263b25d7b7c70b5aeb3",
+                              "sealed_pools.jsonl":  "6c228959456ad06765adc84f86811eb0abe410901769fe5013bd7d6559de4659",
+                              "phase2_gold_labels.jsonl":  "1311d616353f78fb843bfae58d5338877b5d4ec836d0ccd6ab47ec58334f4e7a"
+                          },
+    "files":  {
+                  "server/common.py":  "9adc48d54f8014f9a0e4623448bee7b4e6ac5e728d63ddd6c16d3a75f504fed1",
+                  "server/conditions.py":  "e0a7416b6d5d337ed7a757990506c3a3dab27c89b5e24c91135e5fe292ea290d",
+                  "server/config/judge_prompts.json":  "0a7b6b3728bdb9ed1d847ee9aff6609c7f7c8c31676d0a5ae3f31b28acbae297",
+                  "server/config/pipeline.json":  "3faf36bbf103057cd939dc1ceae645398f058af95085ad36fa6d720a748ee472",
+                  "server/config/prompts.json":  "db3c39483e606cf9c42b7175f9144cce8c94c6c370bcd83aabb56471a7d23e27",
+                  "server/data/oracle_lists.jsonl":  "77e3a6a62e538d2df61c443a9e844b0e58088cbc2dca9fb1a0ec2b9208377d6d",
+                  "server/data/oracle_lists_meta.json":  "1f551e78d2cf9ec297b4a3938b6e11cf1d15f802d5d617ac49b8286af3d12815",
+                  "server/env_check.py":  "7eb25f8870b564b3a190eeb25b8d7f83d5b59d3241bbef7035bc2ba964785cd7",
+                  "server/fetch_models.py":  "bc087a86e4c2c40bbb55a1a0ea6b3f4d27f97b3361f74b81f42589a18bff217f",
+                  "server/freeze.py":  "c291e24927cf2868ed30d0c4e40db4fc13d3d3c09965a45cdd801a76552fb6b1",
+                  "server/generate.py":  "dfee4eebfc61f6ec864ee219897e14cecb9ce534976e8d8f2220f0ac705b0865",
+                  "server/inspect_qa.py":  "0a9e6d074b6ef8e292ce8ca88fb5505f139ea4540fb91b228cdcfaaf6b4fcdcb",
+                  "server/judge.py":  "b0d3cd3d42ae6697a6700fdc73b6845b965c1801ecd999e79aa85887112c8923",
+                  "server/p40.py":  "eeb30620ec6272e816cb0b115b726bcf89b6395175bd8ef5e0d09489a00301f9",
+                  "server/pipeline.py":  "95ee2a334503e5147f69a1d0be3bbcbb90da8d45d5807b00f9fa42467c379e4f",
+                  "server/run_v2.sh":  "a55ba204f9f83a3803c40cc846f8def5e80bb76fa45cad8373eff3240035d9ea",
+                  "server/score_v2.py":  "b9e685ec2cec3bd3e4edf1432526b0d3f5eedc91d2ee15929ab0492d62c39c90",
+                  "server/select_evidence.py":  "7f69800a0ddd76acee226756172b888a6cdd5a77ac400609a9652a612ede75ec",
+                  "server/summarize.py":  "0c5c0740f8c448dd3db65aa7cd4d6422d580bd4434ad83512d138b11be882155",
+                  "server/train_bge.py":  "8aaf3415593884eae28d7298939245896a56c1a7bae6eab47c2c2f2c53104a2a",
+                  "实验设计方案_v2.md":  "93d66880961665a2611184948d9ea813bc18b21112cfad1d3093bf0483113119",
+                  "运行说明.md":  "f562206bc47575fbaee409626265546f70889e6e96eca9e88798ea8ee2754943",
+                  "analysis/build_oracle_lists.py":  "12cad3da63c8112a6529906b86284a2aee980404d1fca6854fd35445ba2d7626",
+                  "tools/launcher.ps1":  "729d883ff34e2dff4d213655e030ac7d4427b05eade7587c399c4285758f4493"
+              }
+}
